@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "EasyNote Extension",
+  "version": "1.0.0",
+  "description": "Add selected text to EasyNote",
+  "permissions": [
+    "contextMenus",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "type": "module"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "entries/default_popup.html",
+        "styles/global.css"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "action": {
+    "default_title": "EasyNote",
+    "default_popup": "entries/default_popup.html",
+    "default_icon": {
+      "32": "icons/icon32_light.png",
+      "48": "icons/icon48_light.png"
+    }
+  },
+  "icons": {
+    "32": "icons/icon32_light.png",
+    "48": "icons/icon48_light.png"
+  }
+}

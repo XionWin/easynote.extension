@@ -1,0 +1,1 @@
+chrome.runtime.onInstalled.addListener(()=>{chrome.contextMenus.create({id:"addToEasyNote",title:"Add to EasyNote",contexts:["selection"]})});chrome.contextMenus.onClicked.addListener((e,t)=>{e.menuItemId==="addToEasyNote"&&e.selectionText&&console.log("Selected text:",e.selectionText)});
