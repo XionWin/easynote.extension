@@ -8,7 +8,7 @@ When you select text on any website, it provides:
 - **Contextual examples**  
 - **Personal word list management**
 
-![Screenshot](https://github.com/XionWin/easynote.extension/resources/screenshort.png)
+![Screenshot](resources/screenshort.png)
 
 This is an independent project and will continue to evolve.  
 New features will be added over time, such as smarter vocabulary review and better integration with external tools.  
