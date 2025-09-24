@@ -8,8 +8,8 @@ When you select text on any website, it provides:
 - **Contextual examples**  
 - **Personal word list management**
 
-![Screenshot](resources/screenshort_1.png)
-![Screenshot](resources/screenshort_2.png)
+![Screenshot](resources/screenshort_1.png){width=949 height=789}
+![Screenshot](resources/screenshort_2.png){width=951 height=474}
 
 This is an independent project and will continue to evolve.  
 New features will be added over time, such as smarter vocabulary review and better integration with external tools.  
