@@ -15,7 +15,13 @@ Thank you for using easynote!
 Your feedback is very important and will help us improve further.
 
 ### ScreenShort
-![Screenshot](resources/screenshort_1.png){width=949 height=789}
-![Screenshot](resources/screenshort_2.png){width=951 height=474}
-
+<p align="center">
+  <img src="resources/screenshort_1.png" alt="ScreenShort" width="800">
+</p>
+<p align="center">
+  <img src="resources/screenshort_2.png" alt="ScreenShort" width="800">
+</p>
+<p align="center">
+  <img src="resources/screenshort_3.png" alt="ScreenShort" width="800">
+</p>
 
