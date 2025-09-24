@@ -16,12 +16,12 @@ Your feedback is very important and will help us improve further.
 
 ### ScreenShort
 <p align="center">
-  <img src="resources/screenshort_1.png" alt="ScreenShort" width="600">
+  <img src="resources/screenshort_1.png" alt="ScreenShort" width="100%">
 </p>
 <p align="center">
-  <img src="resources/screenshort_2.png" alt="ScreenShort" width="600">
+  <img src="resources/screenshort_2.png" alt="ScreenShort" width="100%">
 </p>
 <p align="center">
-  <img src="resources/screenshort_3.png" alt="ScreenShort" width="600">
+  <img src="resources/screenshort_3.png" alt="ScreenShort" width="100%">
 </p>
 
