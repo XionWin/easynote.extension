@@ -1,5 +1,6 @@
 # easynote.extension
 
+### Description
 This extension helps you learn and manage words while browsing the web.  
 When you select text on any website, it provides:
 
@@ -7,13 +8,14 @@ When you select text on any website, it provides:
 - **Pronunciation and phonetic notes**  
 - **Contextual examples**  
 - **Personal word list management**
-
-![Screenshot](resources/screenshort_1.png){width=949 height=789}
-![Screenshot](resources/screenshort_2.png){width=951 height=474}
-
 This is an independent project and will continue to evolve.  
 New features will be added over time, such as smarter vocabulary review and better integration with external tools.  
 
 Thank you for using easynote!  
 Your feedback is very important and will help us improve further.
+
+### ScreenShort
+![Screenshot](resources/screenshort_1.png){width=949 height=789}
+![Screenshot](resources/screenshort_2.png){width=951 height=474}
+
 
