@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "EasyNote Extension",
+  "name": "EasyNote",
   "version": "1.0.0",
-  "description": "Add selected text to EasyNote",
+  "description": "Capture, organize, and translate selected content seamlessly across websites.",
   "permissions": [
     "contextMenus",
     "storage"
