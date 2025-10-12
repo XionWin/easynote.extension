@@ -66,7 +66,6 @@
         }
         g(this.opts.headers) ? e = JSON.stringify(this.opts.body) : typeof this.opts.body == "string" || this.opts.body instanceof FormData ? e = this.opts.body : (s.set("Content-Type", "application/json"), e = JSON.stringify(this.opts.body));
       }
-      console.log("bodyToSend: ", e);
       const o = await fetch(this.url, { method: this.opts.method, headers: s, body: e, signal: this.controller.signal });
       if (!o.ok) {
         const r2 = await y(o);
