@@ -14707,10 +14707,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     stop() {
     }
   };
-  var Ci3 = (a) => {
-    const r = /[\u4E00-\u9FFF\u3040-\u30FF\u31F0-\u31FF]+/;
-    return console.log("isSentence: ", r.test(a)), r.test(a);
-  };
+  var Ci3 = (a) => /[\u4E00-\u9FFF\u3040-\u30FF\u31F0-\u31FF]+/.test(a);
   function _i2(a, r, s, i2) {
     const l2 = ["t", "bd", "ex", "qc", "rm", "ss", "md", "at"], v = [...Object.entries({ dj: "1", client: "gtx", hl: a, sl: r, tl: s, q: i2 }).map(([f2, w4]) => `${f2}=${encodeURIComponent(w4)}`), ...l2.map((f2) => `dt=${f2}`)].join("&");
     return `${ki3}?${v}`;
