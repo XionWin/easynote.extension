@@ -2,14 +2,14 @@
 (() => {
   // dist/translate_message_tempalte-chunk.js
   var m = Object.defineProperty;
-  var g = (n, t, s) => t in n ? m(n, t, { enumerable: true, configurable: true, writable: true, value: s }) : n[t] = s;
-  var l = (n, t, s) => g(n, typeof t != "symbol" ? t + "" : t, s);
-  function f(n) {
+  var f = (n, t, s) => t in n ? m(n, t, { enumerable: true, configurable: true, writable: true, value: s }) : n[t] = s;
+  var l = (n, t, s) => f(n, typeof t != "symbol" ? t + "" : t, s);
+  function y(n) {
     if (!n) return false;
     const t = n instanceof Headers ? n.get("content-type") : n["content-type"] ?? n["Content-Type"];
     return !!t && t.includes("application/json");
   }
-  var E = class {
+  var x = class {
     constructor(t, s, e, o = {}) {
       l(this, "url");
       l(this, "opts");
@@ -43,18 +43,18 @@
           this.running = false;
           break;
         }
-        const p = t.delayMs ?? 1e3, r2 = t.backoff ? p * Math.pow(2, this.attempts - 1) : p;
-        await this.wait(r2);
+        const p = t.delayMs ?? 1e3, i = t.backoff ? p * Math.pow(2, this.attempts - 1) : p;
+        await this.wait(i);
       }
       (c = (o = this.callbacks).onClose) == null || c.call(o), this.running = false;
     }
     async openOnce() {
-      var c, a, p, r2;
+      var c, a, p, i;
       this.controller = new AbortController();
       const t = this.opts.signal;
       t && (t.aborted ? this.controller.abort() : t.addEventListener("abort", () => {
-        var i;
-        return (i = this.controller) == null ? void 0 : i.abort();
+        var r2;
+        return (r2 = this.controller) == null ? void 0 : r2.abort();
       }, { once: true }));
       const s = new Headers(this.opts.headers);
       let e;
@@ -64,16 +64,16 @@
           else throw new Error("Request failed: no model specified. Please provide a valid 'model' parameter before making a request.");
           this.opts.body.stream === void 0 ? this.opts.body = { ...this.opts.body, stream: this.opts.stream ?? true } : this.opts.body.stream = this.opts.stream ?? true;
         }
-        f(this.opts.headers) ? e = JSON.stringify(this.opts.body) : typeof this.opts.body == "string" || this.opts.body instanceof FormData ? e = this.opts.body : (s.set("Content-Type", "application/json"), e = JSON.stringify(this.opts.body));
+        y(this.opts.headers) ? e = JSON.stringify(this.opts.body) : typeof this.opts.body == "string" || this.opts.body instanceof FormData ? e = this.opts.body : (s.set("Content-Type", "application/json"), e = JSON.stringify(this.opts.body));
       }
       const o = await fetch(this.url, { method: this.opts.method, headers: s, body: e, signal: this.controller.signal });
       if (!o.ok) {
-        const i = await y(o);
-        throw new Error(`SSE POST failed: ${o.status} ${o.statusText} - ${i}`);
+        const r2 = await b(o);
+        throw new Error(`SSE POST failed: ${o.status} ${o.statusText} - ${r2}`);
       }
       if ((a = (c = this.callbacks).onOpen) == null || a.call(c, o), !this.opts.stream) {
-        const i = await o.text();
-        (r2 = (p = this.callbacks).onEvent) == null || r2.call(p, { data: i });
+        const r2 = await o.text();
+        (i = (p = this.callbacks).onEvent) == null || i.call(p, { data: r2 });
         return;
       }
       o.body && await this.readStream(o.body.getReader());
@@ -84,12 +84,12 @@
       const o = this.opts.chunkDelimiter ?? `
 
 `, c = (a) => {
-        var r2, i;
+        var i, r2;
         const p = a.split(o);
-        for (let h of p) {
-          if (h = h.trim(), !h) continue;
-          const u = this.parseEvent(h);
-          u && ((i = (r2 = this.callbacks).onEvent) == null || i.call(r2, u));
+        for (let u of p) {
+          if (u = u.trim(), !u) continue;
+          const h = this.parseEvent(u);
+          h && ((r2 = (i = this.callbacks).onEvent) == null || r2.call(i, h));
         }
       };
       try {
@@ -97,12 +97,12 @@
           const { value: a, done: p } = await t.read();
           if (p) break;
           e += s.decode(a, { stream: true });
-          const r2 = e.split(o);
-          for (let i = 0; i < r2.length - 1; i++) {
-            const h = r2[i];
-            c(h + o);
+          const i = e.split(o);
+          for (let r2 = 0; r2 < i.length - 1; r2++) {
+            const u = i[r2];
+            c(u + o);
           }
-          e = r2[r2.length - 1];
+          e = i[i.length - 1];
         }
         e.trim() && c(e);
       } catch (a) {
@@ -120,14 +120,14 @@
       return { id: o, data: c };
     }
   };
-  async function y(n) {
+  async function b(n) {
     try {
       return await n.text();
     } catch {
       return "<no body>";
     }
   }
-  var k = class {
+  var C = class {
     constructor(t, s, e) {
       l(this, "model");
       l(this, "template");
@@ -138,27 +138,30 @@
       return { model: this.model, temperature: 0, messages: this.template.getMessages(t), stream: this.stream };
     }
   };
-  function b(n, t) {
-    const s = [d.identity, "RULES:", ...d.instructions.map((e) => (e = e.replace("${single_word_output_template}", JSON.stringify(S, null, 2)), e = e.replace("${sentence_or_phrase_output_template}", JSON.stringify(T, null, 2)), e = e.replace("${target_language}", n), e))];
+  function d(n, t) {
+    return JSON.stringify(n, null, 2).replace(/\$\{target_language\}/g, t);
+  }
+  function w(n, t) {
+    const s = [g.identity, "RULES:", ...g.instructions.map((e) => (e = e.replace("${single_word_output_template}", d(T, n)), e = e.replace("${sentence_or_phrase_output_template}", d(S, n)), e = e.replace("${target_language}", n), e))];
     return t && (s.push("CONTEXT:"), s.push(t)), s.join(` 
 `);
   }
-  function w(n) {
-    return _.replace("${content_to_translate}", n);
+  function _(n) {
+    return E.replace("${content_to_translate}", n);
   }
-  var x = class {
+  var O = class {
     constructor(t) {
       l(this, "targetLanguage");
       this.targetLanguage = t;
     }
     getMessages(t, s) {
-      return [{ role: "system", content: b(this.targetLanguage, s) }, { role: "user", content: w(t) }];
+      return [{ role: "system", content: w(this.targetLanguage, s) }, { role: "user", content: _(t) }];
     }
   };
-  var d = { identity: "You are a professional multilingual translation engine.", instructions: ["1. For single words: provide translation, phonetics, definitions grouped by part of speech, and example sentences.", "2. For sentences/phrases: provide translation only.", "3. All responses must be in ${target_language}.", "4. For English, Use American phonetics for phonetic symbols.", "5. For Chinese, Use standard Pinyin for phonetic symbols (with tone marks)", "6. For other languages, use their native phonetic systems for phonetic symbols", "7. Do not output languages other than those requested", "8. Consider context when analyzing words.", "9. Output raw JSON without markdown code blocks.", "10. Ensure all textual content (translations, definitions, examples, etc.) is written strictly in the explicitly specified target language.", "SINGLE WORD OUTPUT:", "${single_word_output_template}", "SENTENCE/PHRASE OUTPUT:", "${sentence_or_phrase_output_template}"] };
-  var S = { detected_language: "en-US", translation: "translation in Simplified Chinese", phonetic: "/h\u0259\u02C8l\u0259\u028A/", definitions: [{ pos: "excl.", meaning: "Simplified Chinese translation for current pos", example: { source: "Hello, how are you today?", target: "Simplified Chinese example" } }], contextual_analysis: "contextual analysis use ${target_language}" };
-  var T = { detected_language: "en-US", translation: "translation in Simplified Chinese" };
-  var _ = '\u3010Content to Translate\u3011: "${content_to_translate}"';
+  var g = { identity: "You are a professional multilingual translation engine.", instructions: ["1. For single words: provide translation, phonetics, definitions grouped by part of speech, and example sentences.", "2. For sentences/phrases: provide translation only.", "3. All responses must be in ${target_language}.", "4. For English, Use American phonetics for phonetic symbols.", "5. For Chinese, Use standard Pinyin for phonetic symbols (with tone marks)", "6. For other languages, use their native phonetic systems for phonetic symbols", "7. Do not output languages other than those requested", "8. Consider context when analyzing words.", "9. Output raw JSON without markdown code blocks.", "10. Ensure all textual content (translations, definitions, examples, etc.) is written strictly in the explicitly specified target language.", "SINGLE WORD OUTPUT:", "${single_word_output_template}", "SENTENCE/PHRASE OUTPUT:", "${sentence_or_phrase_output_template}"] };
+  var T = { detected_language: "en-US", translation: "translation in ${target_language}", phonetic: "/h\u0259\u02C8l\u0259\u028A/", definitions: [{ pos: "excl.", meaning: "${target_language} translation for current pos", example: { source: "Hello, how are you today?", target: "${target_language} example" } }], contextual_analysis: "contextual analysis in ${target_language}" };
+  var S = { detected_language: "en-US", translation: "translation in ${target_language}" };
+  var E = '\u3010Content to Translate\u3011: "${content_to_translate}"';
 
   // dist/background.js
   chrome.runtime.onInstalled.addListener(() => {
@@ -167,8 +170,8 @@
   var r = "Simplified Chinese (\u7B80\u4F53\u4E2D\u6587)";
   chrome.contextMenus.onClicked.addListener((t, l2) => {
     if (t.menuItemId === "addToEasyNote" && t.selectionText) {
-      const o = new k("glm-4-flash-250414", new x(r), false);
-      new E("https://open.bigmodel.cn/api/paas/v4/chat/completions", "Bearer f1987d86479f430491bb5210379b814f.Jh99XCkw0kS7tLiN", o.getPrompt(t.selectionText), { onOpen: (e) => console.log("opened, status", e.status), onEvent: (e) => {
+      const o = new C("glm-4-flash-250414", new O(r), false);
+      new x("https://open.bigmodel.cn/api/paas/v4/chat/completions", "Bearer f1987d86479f430491bb5210379b814f.Jh99XCkw0kS7tLiN", o.getPrompt(t.selectionText), { onOpen: (e) => console.log("opened, status", e.status), onEvent: (e) => {
         console.log("SSE event:", e, "data:", e.data);
       }, onError: (e) => console.error("SSE error:", e), onClose: () => console.log("SSE closed") }).start().catch((e) => console.error("start failed:", e));
     }
