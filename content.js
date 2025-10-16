@@ -11738,13 +11738,13 @@ Error generating stack: ` + d2.message + `
           this.running = false;
           break;
         }
-        const p = t.delayMs ?? 1e3, i2 = t.backoff ? p * Math.pow(2, this.attempts - 1) : p;
+        const u = t.delayMs ?? 1e3, i2 = t.backoff ? u * Math.pow(2, this.attempts - 1) : u;
         await this.wait(i2);
       }
       (c = (a = this.callbacks).onClose) == null || c.call(a), this.running = false;
     }
     async openOnce() {
-      var c, o, p, i2;
+      var c, o, u, i2;
       this.controller = new AbortController();
       const t = this.opts.signal;
       t && (t.aborted ? this.controller.abort() : t.addEventListener("abort", () => {
@@ -11768,7 +11768,7 @@ Error generating stack: ` + d2.message + `
       }
       if ((o = (c = this.callbacks).onOpen) == null || o.call(c, a), !this.opts.stream) {
         const r = await a.text();
-        (i2 = (p = this.callbacks).onEvent) == null || i2.call(p, { data: r });
+        (i2 = (u = this.callbacks).onEvent) == null || i2.call(u, { data: r });
         return;
       }
       a.body && await this.readStream(a.body.getReader());
@@ -11780,22 +11780,22 @@ Error generating stack: ` + d2.message + `
 
 `, c = (o) => {
         var i2, r;
-        const p = o.split(a);
-        for (let u of p) {
-          if (u = u.trim(), !u) continue;
-          const h = this.parseEvent(u);
+        const u = o.split(a);
+        for (let p of u) {
+          if (p = p.trim(), !p) continue;
+          const h = this.parseEvent(p);
           h && ((r = (i2 = this.callbacks).onEvent) == null || r.call(i2, h));
         }
       };
       try {
         for (; ; ) {
-          const { value: o, done: p } = await t.read();
-          if (p) break;
+          const { value: o, done: u } = await t.read();
+          if (u) break;
           e += s.decode(o, { stream: true });
           const i2 = e.split(a);
           for (let r = 0; r < i2.length - 1; r++) {
-            const u = i2[r];
-            c(u + a);
+            const p = i2[r];
+            c(p + a);
           }
           e = i2[i2.length - 1];
         }
@@ -11854,7 +11854,7 @@ Error generating stack: ` + d2.message + `
     }
   };
   var g = { identity: "You are a professional multilingual translation engine.", instructions: ["1. For single words: provide translation, phonetics, definitions grouped by part of speech, and example sentences.", "2. For sentences/phrases (i.e., multi-word expressions or sentences containing spaces, punctuation, or more than one word in the detected language): provide translation only.", "3. All responses must be in ${target_language}.", "4. For English, Use American phonetics for phonetic symbols.", "5. For Chinese, Use standard Pinyin for phonetic symbols (with tone marks)", "6. For other languages, use their native phonetic systems for phonetic symbols", "7. Do not output languages other than those requested", "8. Consider context when analyzing words.", "9. Output raw JSON without markdown code blocks.", "10. Ensure all textual content (translations, definitions, examples, etc.) is written strictly in the explicitly specified target language.", "11. For languages such as Chinese, Japanese, Korean, or Thai \u2014 where a single semantic word may consist of multiple characters \u2014 treat any input that represents one semantic unit (i.e., conveys a single idea or concept) as a single word, and follow Rule 1.", "SINGLE WORD OUTPUT:", "${single_word_output_template}", "SENTENCE/PHRASE OUTPUT:", "${sentence_or_phrase_output_template}"] };
-  var T = { detected_language: "en-US", translation: "translation in ${target_language}", phonetic: "/h\u0259\u02C8l\u0259\u028A/", definitions: [{ pos: "excl.", meaning: "${target_language} translation for current pos", example: { source: "Hello, how are you today?", target: "${target_language} example" } }], contextual_analysis: "contextual analysis in ${target_language}" };
+  var T = { detected_language: "en-US", translation: "translation in ${target_language}", phonetic: "/h\u0259\u02C8l\u0259\u028A/", definitions: [{ pos: "excl.", meaning: "${target_language} translation for current pos", example: { source: "A natural example sentence written in source language, accurately showing this sense of the word.", target: "The same example translated into ${target_language}." } }], contextual_analysis: "contextual analysis in ${target_language}" };
   var S = { detected_language: "en-US", translation: "translation in ${target_language}" };
   var x = '\u3010Content to Translate\u3011: "${content_to_translate}"';
 

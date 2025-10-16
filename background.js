@@ -43,13 +43,13 @@
           this.running = false;
           break;
         }
-        const p = t.delayMs ?? 1e3, i = t.backoff ? p * Math.pow(2, this.attempts - 1) : p;
+        const u = t.delayMs ?? 1e3, i = t.backoff ? u * Math.pow(2, this.attempts - 1) : u;
         await this.wait(i);
       }
       (c = (a = this.callbacks).onClose) == null || c.call(a), this.running = false;
     }
     async openOnce() {
-      var c, o, p, i;
+      var c, o, u, i;
       this.controller = new AbortController();
       const t = this.opts.signal;
       t && (t.aborted ? this.controller.abort() : t.addEventListener("abort", () => {
@@ -73,7 +73,7 @@
       }
       if ((o = (c = this.callbacks).onOpen) == null || o.call(c, a), !this.opts.stream) {
         const r2 = await a.text();
-        (i = (p = this.callbacks).onEvent) == null || i.call(p, { data: r2 });
+        (i = (u = this.callbacks).onEvent) == null || i.call(u, { data: r2 });
         return;
       }
       a.body && await this.readStream(a.body.getReader());
@@ -85,22 +85,22 @@
 
 `, c = (o) => {
         var i, r2;
-        const p = o.split(a);
-        for (let u of p) {
-          if (u = u.trim(), !u) continue;
-          const h = this.parseEvent(u);
+        const u = o.split(a);
+        for (let p of u) {
+          if (p = p.trim(), !p) continue;
+          const h = this.parseEvent(p);
           h && ((r2 = (i = this.callbacks).onEvent) == null || r2.call(i, h));
         }
       };
       try {
         for (; ; ) {
-          const { value: o, done: p } = await t.read();
-          if (p) break;
+          const { value: o, done: u } = await t.read();
+          if (u) break;
           e += s.decode(o, { stream: true });
           const i = e.split(a);
           for (let r2 = 0; r2 < i.length - 1; r2++) {
-            const u = i[r2];
-            c(u + a);
+            const p = i[r2];
+            c(p + a);
           }
           e = i[i.length - 1];
         }
@@ -159,7 +159,7 @@
     }
   };
   var g = { identity: "You are a professional multilingual translation engine.", instructions: ["1. For single words: provide translation, phonetics, definitions grouped by part of speech, and example sentences.", "2. For sentences/phrases (i.e., multi-word expressions or sentences containing spaces, punctuation, or more than one word in the detected language): provide translation only.", "3. All responses must be in ${target_language}.", "4. For English, Use American phonetics for phonetic symbols.", "5. For Chinese, Use standard Pinyin for phonetic symbols (with tone marks)", "6. For other languages, use their native phonetic systems for phonetic symbols", "7. Do not output languages other than those requested", "8. Consider context when analyzing words.", "9. Output raw JSON without markdown code blocks.", "10. Ensure all textual content (translations, definitions, examples, etc.) is written strictly in the explicitly specified target language.", "11. For languages such as Chinese, Japanese, Korean, or Thai \u2014 where a single semantic word may consist of multiple characters \u2014 treat any input that represents one semantic unit (i.e., conveys a single idea or concept) as a single word, and follow Rule 1.", "SINGLE WORD OUTPUT:", "${single_word_output_template}", "SENTENCE/PHRASE OUTPUT:", "${sentence_or_phrase_output_template}"] };
-  var T = { detected_language: "en-US", translation: "translation in ${target_language}", phonetic: "/h\u0259\u02C8l\u0259\u028A/", definitions: [{ pos: "excl.", meaning: "${target_language} translation for current pos", example: { source: "Hello, how are you today?", target: "${target_language} example" } }], contextual_analysis: "contextual analysis in ${target_language}" };
+  var T = { detected_language: "en-US", translation: "translation in ${target_language}", phonetic: "/h\u0259\u02C8l\u0259\u028A/", definitions: [{ pos: "excl.", meaning: "${target_language} translation for current pos", example: { source: "A natural example sentence written in source language, accurately showing this sense of the word.", target: "The same example translated into ${target_language}." } }], contextual_analysis: "contextual analysis in ${target_language}" };
   var S = { detected_language: "en-US", translation: "translation in ${target_language}" };
   var x = '\u3010Content to Translate\u3011: "${content_to_translate}"';
 
