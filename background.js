@@ -9,15 +9,15 @@
     const t = n instanceof Headers ? n.get("content-type") : n["content-type"] ?? n["Content-Type"];
     return !!t && t.includes("application/json");
   }
-  var x = class {
-    constructor(t, s, e, o = {}) {
+  var k = class {
+    constructor(t, s, e, a = {}) {
       l(this, "url");
       l(this, "opts");
       l(this, "callbacks");
       l(this, "controller", null);
       l(this, "running", false);
       l(this, "attempts", 0);
-      this.url = t, this.opts = { model: e.model, method: "POST", stream: e.stream, reconnect: { maxAttempts: 5, delayMs: 1e3, backoff: true }, headers: { Authorization: s, "Content-Type": "application/json" }, body: { messages: e.messages } }, this.callbacks = o;
+      this.url = t, this.opts = { model: e.model, method: "POST", stream: e.stream, reconnect: { maxAttempts: 5, delayMs: 1e3, backoff: true }, headers: { Authorization: s, "Content-Type": "application/json" }, body: { messages: e.messages } }, this.callbacks = a;
     }
     async wait(t) {
       return new Promise((s) => setTimeout(s, t));
@@ -30,15 +30,15 @@
       (t = this.controller) == null || t.abort(), this.running = false;
     }
     async start() {
-      var s, e, o, c;
+      var s, e, a, c;
       if (this.running) throw new Error("SSEPost already running");
       this.running = true, this.attempts = 0;
       const t = this.opts.reconnect;
       for (; this.running; ) try {
         this.attempts++, await this.openOnce();
         break;
-      } catch (a) {
-        if ((e = (s = this.callbacks).onError) == null || e.call(s, a), !this.running) break;
+      } catch (o) {
+        if ((e = (s = this.callbacks).onError) == null || e.call(s, o), !this.running) break;
         if (this.attempts >= (t.maxAttempts ?? 0)) {
           this.running = false;
           break;
@@ -46,10 +46,10 @@
         const p = t.delayMs ?? 1e3, i = t.backoff ? p * Math.pow(2, this.attempts - 1) : p;
         await this.wait(i);
       }
-      (c = (o = this.callbacks).onClose) == null || c.call(o), this.running = false;
+      (c = (a = this.callbacks).onClose) == null || c.call(a), this.running = false;
     }
     async openOnce() {
-      var c, a, p, i;
+      var c, o, p, i;
       this.controller = new AbortController();
       const t = this.opts.signal;
       t && (t.aborted ? this.controller.abort() : t.addEventListener("abort", () => {
@@ -66,26 +66,26 @@
         }
         y(this.opts.headers) ? e = JSON.stringify(this.opts.body) : typeof this.opts.body == "string" || this.opts.body instanceof FormData ? e = this.opts.body : (s.set("Content-Type", "application/json"), e = JSON.stringify(this.opts.body));
       }
-      const o = await fetch(this.url, { method: this.opts.method, headers: s, body: e, signal: this.controller.signal });
-      if (!o.ok) {
-        const r2 = await b(o);
-        throw new Error(`SSE POST failed: ${o.status} ${o.statusText} - ${r2}`);
+      const a = await fetch(this.url, { method: this.opts.method, headers: s, body: e, signal: this.controller.signal });
+      if (!a.ok) {
+        const r2 = await b(a);
+        throw new Error(`SSE POST failed: ${a.status} ${a.statusText} - ${r2}`);
       }
-      if ((a = (c = this.callbacks).onOpen) == null || a.call(c, o), !this.opts.stream) {
-        const r2 = await o.text();
+      if ((o = (c = this.callbacks).onOpen) == null || o.call(c, a), !this.opts.stream) {
+        const r2 = await a.text();
         (i = (p = this.callbacks).onEvent) == null || i.call(p, { data: r2 });
         return;
       }
-      o.body && await this.readStream(o.body.getReader());
+      a.body && await this.readStream(a.body.getReader());
     }
     async readStream(t) {
       const s = new TextDecoder("utf-8");
       let e = "";
-      const o = this.opts.chunkDelimiter ?? `
+      const a = this.opts.chunkDelimiter ?? `
 
-`, c = (a) => {
+`, c = (o) => {
         var i, r2;
-        const p = a.split(o);
+        const p = o.split(a);
         for (let u of p) {
           if (u = u.trim(), !u) continue;
           const h = this.parseEvent(u);
@@ -94,30 +94,30 @@
       };
       try {
         for (; ; ) {
-          const { value: a, done: p } = await t.read();
+          const { value: o, done: p } = await t.read();
           if (p) break;
-          e += s.decode(a, { stream: true });
-          const i = e.split(o);
+          e += s.decode(o, { stream: true });
+          const i = e.split(a);
           for (let r2 = 0; r2 < i.length - 1; r2++) {
             const u = i[r2];
-            c(u + o);
+            c(u + a);
           }
           e = i[i.length - 1];
         }
         e.trim() && c(e);
-      } catch (a) {
-        if (a.name === "AbortError") return;
-        throw a;
+      } catch (o) {
+        if (o.name === "AbortError") return;
+        throw o;
       }
     }
     parseEvent(t) {
       const s = t.split(/\r?\n/);
-      let e = [], o;
-      for (const a of s) a.startsWith("id:") ? o = a.slice(3).trim() : a.startsWith("data:") && e.push(a.slice(5).replace(/^\s?/, ""));
+      let e = [], a;
+      for (const o of s) o.startsWith("id:") ? a = o.slice(3).trim() : o.startsWith("data:") && e.push(o.slice(5).replace(/^\s?/, ""));
       if (e.length === 0) return null;
       const c = e.join(`
 `);
-      return { id: o, data: c };
+      return { id: a, data: c };
     }
   };
   async function b(n) {
@@ -147,7 +147,7 @@
 `);
   }
   function _(n) {
-    return E.replace("${content_to_translate}", n);
+    return x.replace("${content_to_translate}", n);
   }
   var O = class {
     constructor(t) {
@@ -158,10 +158,10 @@
       return [{ role: "system", content: w(this.targetLanguage, s) }, { role: "user", content: _(t) }];
     }
   };
-  var g = { identity: "You are a professional multilingual translation engine.", instructions: ["1. For single words: provide translation, phonetics, definitions grouped by part of speech, and example sentences.", "2. For sentences/phrases: provide translation only.", "3. All responses must be in ${target_language}.", "4. For English, Use American phonetics for phonetic symbols.", "5. For Chinese, Use standard Pinyin for phonetic symbols (with tone marks)", "6. For other languages, use their native phonetic systems for phonetic symbols", "7. Do not output languages other than those requested", "8. Consider context when analyzing words.", "9. Output raw JSON without markdown code blocks.", "10. Ensure all textual content (translations, definitions, examples, etc.) is written strictly in the explicitly specified target language.", "SINGLE WORD OUTPUT:", "${single_word_output_template}", "SENTENCE/PHRASE OUTPUT:", "${sentence_or_phrase_output_template}"] };
+  var g = { identity: "You are a professional multilingual translation engine.", instructions: ["1. For single words: provide translation, phonetics, definitions grouped by part of speech, and example sentences.", "2. For sentences/phrases (i.e., multi-word expressions or sentences containing spaces, punctuation, or more than one word in the detected language): provide translation only.", "3. All responses must be in ${target_language}.", "4. For English, Use American phonetics for phonetic symbols.", "5. For Chinese, Use standard Pinyin for phonetic symbols (with tone marks)", "6. For other languages, use their native phonetic systems for phonetic symbols", "7. Do not output languages other than those requested", "8. Consider context when analyzing words.", "9. Output raw JSON without markdown code blocks.", "10. Ensure all textual content (translations, definitions, examples, etc.) is written strictly in the explicitly specified target language.", "11. For languages such as Chinese, Japanese, Korean, or Thai \u2014 where a single semantic word may consist of multiple characters \u2014 treat any input that represents one semantic unit (i.e., conveys a single idea or concept) as a single word, and follow Rule 1.", "SINGLE WORD OUTPUT:", "${single_word_output_template}", "SENTENCE/PHRASE OUTPUT:", "${sentence_or_phrase_output_template}"] };
   var T = { detected_language: "en-US", translation: "translation in ${target_language}", phonetic: "/h\u0259\u02C8l\u0259\u028A/", definitions: [{ pos: "excl.", meaning: "${target_language} translation for current pos", example: { source: "Hello, how are you today?", target: "${target_language} example" } }], contextual_analysis: "contextual analysis in ${target_language}" };
   var S = { detected_language: "en-US", translation: "translation in ${target_language}" };
-  var E = '\u3010Content to Translate\u3011: "${content_to_translate}"';
+  var x = '\u3010Content to Translate\u3011: "${content_to_translate}"';
 
   // dist/background.js
   chrome.runtime.onInstalled.addListener(() => {
@@ -171,7 +171,7 @@
   chrome.contextMenus.onClicked.addListener((t, l2) => {
     if (t.menuItemId === "addToEasyNote" && t.selectionText) {
       const o = new C("glm-4-flash-250414", new O(r), false);
-      new x("https://open.bigmodel.cn/api/paas/v4/chat/completions", "Bearer f1987d86479f430491bb5210379b814f.Jh99XCkw0kS7tLiN", o.getPrompt(t.selectionText), { onOpen: (e) => console.log("opened, status", e.status), onEvent: (e) => {
+      new k("https://open.bigmodel.cn/api/paas/v4/chat/completions", "Bearer f1987d86479f430491bb5210379b814f.Jh99XCkw0kS7tLiN", o.getPrompt(t.selectionText), { onOpen: (e) => console.log("opened, status", e.status), onEvent: (e) => {
         console.log("SSE event:", e, "data:", e.data);
       }, onError: (e) => console.error("SSE error:", e), onClose: () => console.log("SSE closed") }).start().catch((e) => console.error("start failed:", e));
     }
