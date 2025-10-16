@@ -8,6 +8,7 @@ When you select text on any website, it provides:
 - **Pronunciation and phonetic notes**  
 - **Contextual examples**  
 - **Personal word list management** (Not availiable)
+
 This is an independent project and will continue to evolve.  
 New features will be added over time, such as smarter vocabulary review and better integration with external tools.  
 
