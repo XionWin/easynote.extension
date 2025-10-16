@@ -4435,7 +4435,7 @@
       var t = tr2(en2.current), o = no(t, e.type);
       t !== o && (_e(To2, e), _e(en2, o));
     }
-    function na(e) {
+    function na2(e) {
       To2.current === e && (ze2(en2), ze2(To2));
     }
     var Oe2 = Rn3(0);
@@ -4460,15 +4460,15 @@
       return null;
     }
     var ra2 = [];
-    function oa2() {
+    function oa() {
       for (var e = 0; e < ra2.length; e++) ra2[e]._workInProgressVersionPrimary = null;
       ra2.length = 0;
     }
-    var Ol = j.ReactCurrentDispatcher, la2 = j.ReactCurrentBatchConfig, nr2 = 0, Ke = null, Ze2 = null, tt = null, Kl = false, Mo2 = false, Ro2 = 0, Vg = 0;
+    var Ol = j.ReactCurrentDispatcher, la = j.ReactCurrentBatchConfig, nr2 = 0, Ke = null, Ze2 = null, tt = null, Kl = false, Mo2 = false, Ro2 = 0, Vg = 0;
     function at2() {
       throw Error(l2(321));
     }
-    function ia(e, t) {
+    function ia2(e, t) {
       if (t === null) return false;
       for (var o = 0; o < t.length && o < e.length; o++) if (!Ht2(e[o], t[o])) return false;
       return true;
@@ -4561,7 +4561,7 @@
     }
     function Fd(e, t) {
       var o = Ke, s = At2(), u = t(), d2 = !Ht2(s.memoizedState, u);
-      if (d2 && (s.memoizedState = u, yt = true), s = s.queue, da(Ld.bind(null, o, s, e), [e]), s.getSnapshot !== t || d2 || tt !== null && tt.memoizedState.tag & 1) {
+      if (d2 && (s.memoizedState = u, yt = true), s = s.queue, da2(Ld.bind(null, o, s, e), [e]), s.getSnapshot !== t || d2 || tt !== null && tt.memoizedState.tag & 1) {
         if (o.flags |= 2048, _o2(9, zd.bind(null, o, s, u, t), void 0, null), nt2 === null) throw Error(l2(349));
         (nr2 & 30) !== 0 || Ad(o, t, u);
       }
@@ -4612,7 +4612,7 @@
       var d2 = void 0;
       if (Ze2 !== null) {
         var h = Ze2.memoizedState;
-        if (d2 = h.destroy, s !== null && ia(s, h.deps)) {
+        if (d2 = h.destroy, s !== null && ia2(s, h.deps)) {
           u.memoizedState = _o2(t, o, d2, s);
           return;
         }
@@ -4622,7 +4622,7 @@
     function Vd(e, t) {
       return jl(8390656, 8, e, t);
     }
-    function da(e, t) {
+    function da2(e, t) {
       return Vl(2048, 8, e, t);
     }
     function Hd(e, t) {
@@ -4648,13 +4648,13 @@
       var o = At2();
       t = t === void 0 ? null : t;
       var s = o.memoizedState;
-      return s !== null && t !== null && ia(t, s[1]) ? s[0] : (o.memoizedState = [e, t], e);
+      return s !== null && t !== null && ia2(t, s[1]) ? s[0] : (o.memoizedState = [e, t], e);
     }
     function Qd(e, t) {
       var o = At2();
       t = t === void 0 ? null : t;
       var s = o.memoizedState;
-      return s !== null && t !== null && ia(t, s[1]) ? s[0] : (e = e(), o.memoizedState = [e, t], e);
+      return s !== null && t !== null && ia2(t, s[1]) ? s[0] : (e = e(), o.memoizedState = [e, t], e);
     }
     function Yd(e, t, o) {
       return (nr2 & 21) === 0 ? (e.baseState && (e.baseState = false, yt = true), e.memoizedState = o) : (Ht2(o, t) || (o = Ec(), Ke.lanes |= o, rr2 |= o, e.baseState = true), t);
@@ -4662,12 +4662,12 @@
     function Hg(e, t) {
       var o = Ne;
       Ne = o !== 0 && 4 > o ? o : 4, e(true);
-      var s = la2.transition;
-      la2.transition = {};
+      var s = la.transition;
+      la.transition = {};
       try {
         e(false), t();
       } finally {
-        Ne = o, la2.transition = s;
+        Ne = o, la.transition = s;
       }
     }
     function Xd() {
@@ -4756,7 +4756,7 @@
         o = (s & ~(1 << 32 - Vt2(s) - 1)).toString(32) + o, t = ":" + t + "R" + o, o = Ro2++, 0 < o && (t += "H" + o.toString(32)), t += ":";
       } else o = Vg++, t = ":" + t + "r" + o.toString(32) + ":";
       return e.memoizedState = t;
-    }, unstable_isNewReconciler: false }, Gg = { readContext: Ft2, useCallback: Gd, useContext: Ft2, useEffect: da, useImperativeHandle: Wd, useInsertionEffect: Hd, useLayoutEffect: Bd, useMemo: Qd, useReducer: ua, useRef: jd, useState: function() {
+    }, unstable_isNewReconciler: false }, Gg = { readContext: Ft2, useCallback: Gd, useContext: Ft2, useEffect: da2, useImperativeHandle: Wd, useInsertionEffect: Hd, useLayoutEffect: Bd, useMemo: Qd, useReducer: ua, useRef: jd, useState: function() {
       return ua(Io2);
     }, useDebugValue: fa, useDeferredValue: function(e) {
       var t = At2();
@@ -4764,7 +4764,7 @@
     }, useTransition: function() {
       var e = ua(Io2)[0], t = At2().memoizedState;
       return [e, t];
-    }, useMutableSource: _d, useSyncExternalStore: Fd, useId: Xd, unstable_isNewReconciler: false }, Qg = { readContext: Ft2, useCallback: Gd, useContext: Ft2, useEffect: da, useImperativeHandle: Wd, useInsertionEffect: Hd, useLayoutEffect: Bd, useMemo: Qd, useReducer: ca, useRef: jd, useState: function() {
+    }, useMutableSource: _d, useSyncExternalStore: Fd, useId: Xd, unstable_isNewReconciler: false }, Qg = { readContext: Ft2, useCallback: Gd, useContext: Ft2, useEffect: da2, useImperativeHandle: Wd, useInsertionEffect: Hd, useLayoutEffect: Bd, useMemo: Qd, useReducer: ca, useRef: jd, useState: function() {
       return ca(Io2);
     }, useDebugValue: fa, useDeferredValue: function(e) {
       var t = At2();
@@ -5236,9 +5236,9 @@ Error generating stack: ` + d2.message + `
         case 1:
           return gt2(t.type) && Pl(), ut2(t), null;
         case 3:
-          return s = t.stateNode, Dr2(), ze2(vt2), ze2(st2), oa2(), s.pendingContext && (s.context = s.pendingContext, s.pendingContext = null), (e === null || e.child === null) && (Il(t) ? t.flags |= 4 : e === null || e.memoizedState.isDehydrated && (t.flags & 256) === 0 || (t.flags |= 1024, Bt !== null && (Fa(Bt), Bt = null))), ka(e, t), ut2(t), null;
+          return s = t.stateNode, Dr2(), ze2(vt2), ze2(st2), oa(), s.pendingContext && (s.context = s.pendingContext, s.pendingContext = null), (e === null || e.child === null) && (Il(t) ? t.flags |= 4 : e === null || e.memoizedState.isDehydrated && (t.flags & 256) === 0 || (t.flags |= 1024, Bt !== null && (Fa(Bt), Bt = null))), ka(e, t), ut2(t), null;
         case 5:
-          na(t);
+          na2(t);
           var u = tr2(No2.current);
           if (o = t.type, e !== null && t.stateNode != null) xf(e, t, o, s, u), e.ref !== t.ref && (t.flags |= 512, t.flags |= 2097152);
           else {
@@ -5455,9 +5455,9 @@ Error generating stack: ` + d2.message + `
         case 1:
           return gt2(t.type) && Pl(), e = t.flags, e & 65536 ? (t.flags = e & -65537 | 128, t) : null;
         case 3:
-          return Dr2(), ze2(vt2), ze2(st2), oa2(), e = t.flags, (e & 65536) !== 0 && (e & 128) === 0 ? (t.flags = e & -65537 | 128, t) : null;
+          return Dr2(), ze2(vt2), ze2(st2), oa(), e = t.flags, (e & 65536) !== 0 && (e & 128) === 0 ? (t.flags = e & -65537 | 128, t) : null;
         case 5:
-          return na(t), null;
+          return na2(t), null;
         case 13:
           if (ze2(Oe2), e = t.memoizedState, e !== null && e.dehydrated !== null) {
             if (t.alternate === null) throw Error(l2(340));
@@ -6307,10 +6307,10 @@ Error generating stack: ` + d2.message + `
             s = s.type.childContextTypes, s != null && Pl();
             break;
           case 3:
-            Dr2(), ze2(vt2), ze2(st2), oa2();
+            Dr2(), ze2(vt2), ze2(st2), oa();
             break;
           case 5:
-            na(s);
+            na2(s);
             break;
           case 4:
             Dr2();
@@ -11882,8 +11882,8 @@ Error generating stack: ` + d2.message + `
   var Co = gr2({ slots: { base: "", heading: "", trigger: ["flex py-4 w-full h-full gap-3 outline-solid outline-transparent items-center tap-highlight-transparent", ...ts], startContent: "shrink-0", indicator: "text-default-400", titleWrapper: "flex-1 flex flex-col text-start", title: "text-foreground text-medium", subtitle: "text-small text-foreground-500 font-normal", content: "py-2" }, variants: { variant: { splitted: { base: "px-4 bg-content1 shadow-medium rounded-medium" } }, isCompact: { true: { trigger: "py-2", title: "text-medium", subtitle: "text-small", indicator: "text-medium", content: "py-1" } }, isDisabled: { true: { base: "opacity-disabled pointer-events-none" } }, hideIndicator: { true: { indicator: "hidden" } }, disableAnimation: { true: { content: "hidden data-[open=true]:block" }, false: { indicator: "transition-transform", trigger: "transition-opacity" } }, disableIndicatorAnimation: { true: { indicator: "transition-none" }, false: { indicator: "rotate-0 data-[open=true]:-rotate-90 rtl:-rotate-180 rtl:data-[open=true]:-rotate-90" } } }, defaultVariants: { size: "md", radius: "lg", isDisabled: false, hideIndicator: false, disableIndicatorAnimation: false } });
   var Ra = (i2) => ne.jsx("svg", { "aria-hidden": "true", fill: "none", focusable: "false", height: "1em", role: "presentation", viewBox: "0 0 24 24", width: "1em", ...i2, children: ne.jsx("path", { d: "M15.5 19l-7-7 7-7", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5" }) });
   function _o(i2, n) {
-    let { elementType: d2 = "button", isDisabled: p, onPress: u, onPressStart: g2, onPressEnd: x2, onPressUp: y2, onPressChange: k2, preventFocusOnPress: h, allowFocusWhenDisabled: z, onClick: E2, href: j, target: I, rel: L2, type: N2 = "button" } = i2, _3;
-    d2 === "button" ? _3 = { type: N2, disabled: p, form: i2.form, formAction: i2.formAction, formEncType: i2.formEncType, formMethod: i2.formMethod, formNoValidate: i2.formNoValidate, formTarget: i2.formTarget, name: i2.name, value: i2.value } : _3 = { role: "button", href: d2 === "a" && !p ? j : void 0, target: d2 === "a" ? I : void 0, type: d2 === "input" ? N2 : void 0, disabled: d2 === "input" ? p : void 0, "aria-disabled": !p || d2 === "input" ? void 0 : p, rel: d2 === "a" ? L2 : void 0 };
+    let { elementType: d2 = "button", isDisabled: p, onPress: u, onPressStart: g2, onPressEnd: x2, onPressUp: y2, onPressChange: k2, preventFocusOnPress: h, allowFocusWhenDisabled: z, onClick: E2, href: j, target: N2, rel: L2, type: I = "button" } = i2, _3;
+    d2 === "button" ? _3 = { type: I, disabled: p, form: i2.form, formAction: i2.formAction, formEncType: i2.formEncType, formMethod: i2.formMethod, formNoValidate: i2.formNoValidate, formTarget: i2.formTarget, name: i2.name, value: i2.value } : _3 = { role: "button", href: d2 === "a" && !p ? j : void 0, target: d2 === "a" ? N2 : void 0, type: d2 === "input" ? I : void 0, disabled: d2 === "input" ? p : void 0, "aria-disabled": !p || d2 === "input" ? void 0 : p, rel: d2 === "a" ? L2 : void 0 };
     let { pressProps: T2, isPressed: M } = Pb({ onPressStart: g2, onPressEnd: x2, onPressChange: k2, onPress: u, onPressUp: y2, onClick: E2, isDisabled: p, preventFocusOnPress: h, ref: n }), { focusableProps: A2 } = Ob(i2, n);
     z && (A2.tabIndex = p ? -1 : A2.tabIndex);
     let $ = wn2(A2, T2, bh(i2, { labelable: true }));
@@ -11894,12 +11894,12 @@ Error generating stack: ` + d2.message + `
     w.useEffect(() => {
       g2 === n.focusedKey && document.activeElement !== d2.current && d2.current && qr(d2.current);
     }, [d2, g2, n.focusedKey]);
-    let z = w.useCallback((N2) => {
-      x2.canSelectItem(g2) && (x2.select(g2, N2), n.toggleKey(g2));
+    let z = w.useCallback((I) => {
+      x2.canSelectItem(g2) && (x2.select(g2, I), n.toggleKey(g2));
     }, [g2, x2]);
-    const E2 = w.useCallback((N2) => {
-      x2.selectionBehavior === "replace" && x2.extendSelection(N2), x2.setFocusedKey(N2);
-    }, [x2]), j = w.useCallback((N2) => {
+    const E2 = w.useCallback((I) => {
+      x2.selectionBehavior === "replace" && x2.extendSelection(I), x2.setFocusedKey(I);
+    }, [x2]), j = w.useCallback((I) => {
       const T2 = { ArrowDown: () => {
         const M = n.collection.getKeyAfter(g2);
         if (M && n.disabledKeys.has(M)) {
@@ -11918,11 +11918,11 @@ Error generating stack: ` + d2.message + `
       }, End: () => {
         const M = n.collection.getLastKey();
         M && E2(M);
-      } }[N2.key];
-      T2 && (N2.preventDefault(), x2.canSelectItem(g2) && T2(N2));
+      } }[I.key];
+      T2 && (I.preventDefault(), x2.canSelectItem(g2) && T2(I));
     }, [g2, x2]);
-    let { buttonProps: I } = _o({ id: y2, elementType: "button", isDisabled: h, onKeyDown: j, onPress: z }, d2), L2 = n.selectionManager.isSelected(p.key);
-    return { buttonProps: { ...I, "aria-expanded": L2, "aria-controls": L2 ? k2 : void 0 }, regionProps: { id: k2, role: "region", "aria-labelledby": y2 } };
+    let { buttonProps: N2 } = _o({ id: y2, elementType: "button", isDisabled: h, onKeyDown: j, onPress: z }, d2), L2 = n.selectionManager.isSelected(p.key);
+    return { buttonProps: { ...N2, "aria-expanded": L2, "aria-controls": L2 ? k2 : void 0 }, regionProps: { id: k2, role: "region", "aria-labelledby": y2 } };
   }
   function zo(i2, n, d2) {
     let { listProps: p } = B5({ ...i2, ...n, allowsTabNavigation: true, disallowSelectAll: true, ref: d2 });
@@ -11930,7 +11930,7 @@ Error generating stack: ` + d2.message + `
   }
   function To(i2) {
     var n, d2;
-    const p = Jo(), { ref: u, as: g2, item: x2, onFocusChange: y2 } = i2, { state: k2, className: h, indicator: z, children: E2, title: j, subtitle: I, startContent: L2, motionProps: N2, focusedKey: _3, variant: T2, isCompact: M = false, classNames: A2 = {}, isDisabled: $ = false, hideIndicator: Z2 = false, disableAnimation: U2 = (n = p == null ? void 0 : p.disableAnimation) != null ? n : false, keepContentMounted: q2 = false, disableIndicatorAnimation: ge2 = false, HeadingComponent: he2 = g2 || "h2", onPress: de3, onPressStart: we2, onPressEnd: re2, onPressChange: Ce2, onPressUp: Ne, onClick: De2, ..._e } = i2, Ze2 = g2 || "div", Ee3 = typeof Ze2 == "string", ae2 = Gn(u), G2 = k2.disabledKeys.has(x2.key) || $, J2 = k2.selectionManager.isSelected(x2.key), { buttonProps: Ie2, regionProps: Le } = Eo({ item: x2, isDisabled: G2 }, { ...k2, focusedKey: _3 }, ae2), { onFocus: ue2, onBlur: Ye2, ...Oe2 } = Ie2, { isFocused: Xe3, isFocusVisible: $e3, focusProps: ee } = lc({ autoFocus: (d2 = x2.props) == null ? void 0 : d2.autoFocus }), { isHovered: se2, hoverProps: fe2 } = cm({ isDisabled: G2 }), { pressProps: Ae, isPressed: ne2 } = Pb({ ref: ae2, isDisabled: G2, onPress: de3, onPressStart: we2, onPressEnd: re2, onPressChange: Ce2, onPressUp: Ne }), ye2 = w.useCallback(() => {
+    const p = Jo(), { ref: u, as: g2, item: x2, onFocusChange: y2 } = i2, { state: k2, className: h, indicator: z, children: E2, title: j, subtitle: N2, startContent: L2, motionProps: I, focusedKey: _3, variant: T2, isCompact: M = false, classNames: A2 = {}, isDisabled: $ = false, hideIndicator: Z2 = false, disableAnimation: U2 = (n = p == null ? void 0 : p.disableAnimation) != null ? n : false, keepContentMounted: q2 = false, disableIndicatorAnimation: ge2 = false, HeadingComponent: he2 = g2 || "h2", onPress: de3, onPressStart: we2, onPressEnd: re2, onPressChange: Ce2, onPressUp: Ne, onClick: De2, ..._e } = i2, Ze2 = g2 || "div", Ee3 = typeof Ze2 == "string", ae2 = Gn(u), G2 = k2.disabledKeys.has(x2.key) || $, J2 = k2.selectionManager.isSelected(x2.key), { buttonProps: Ie2, regionProps: Le } = Eo({ item: x2, isDisabled: G2 }, { ...k2, focusedKey: _3 }, ae2), { onFocus: ue2, onBlur: Ye2, ...Oe2 } = Ie2, { isFocused: Xe3, isFocusVisible: $e3, focusProps: ee } = lc({ autoFocus: (d2 = x2.props) == null ? void 0 : d2.autoFocus }), { isHovered: se2, hoverProps: fe2 } = cm({ isDisabled: G2 }), { pressProps: Ae, isPressed: ne2 } = Pb({ ref: ae2, isDisabled: G2, onPress: de3, onPressStart: we2, onPressEnd: re2, onPressChange: Ce2, onPressUp: Ne }), ye2 = w.useCallback(() => {
       y2 == null || y2(true, x2.key);
     }, []), ft2 = w.useCallback(() => {
       y2 == null || y2(false, x2.key);
@@ -11938,20 +11938,20 @@ Error generating stack: ` + d2.message + `
       var nt2, He2;
       return { ref: ae2, "data-open": je(J2), "data-focus": je(Xe3), "data-focus-visible": je($e3), "data-disabled": je(G2), "data-hover": je(se2), "data-pressed": je(ne2), "data-slot": "trigger", className: ie2.trigger({ class: H2 == null ? void 0 : H2.trigger }), onFocus: y5(ye2, ue2, ee.onFocus, _e.onFocus, (nt2 = x2.props) == null ? void 0 : nt2.onFocus), onBlur: y5(ft2, Ye2, ee.onBlur, _e.onBlur, (He2 = x2.props) == null ? void 0 : He2.onBlur), ...ln2(Oe2, fe2, Ae, le2, { onClick: Lu(Ae.onClick, De2) }) };
     }, vt2 = w.useCallback((le2 = {}) => ({ "data-open": je(J2), "data-disabled": je(G2), "data-slot": "content", className: ie2.content({ class: H2 == null ? void 0 : H2.content }), ...ln2(Le, le2) }), [ie2, H2, Le, J2, G2, H2 == null ? void 0 : H2.content]), ke = w.useCallback((le2 = {}) => ({ "aria-hidden": je(true), "data-open": je(J2), "data-disabled": je(G2), "data-slot": "indicator", className: ie2.indicator({ class: H2 == null ? void 0 : H2.indicator }), ...le2 }), [ie2, H2 == null ? void 0 : H2.indicator, J2, G2, H2 == null ? void 0 : H2.indicator]), ce3 = w.useCallback((le2 = {}) => ({ "data-open": je(J2), "data-disabled": je(G2), "data-slot": "heading", className: ie2.heading({ class: H2 == null ? void 0 : H2.heading }), ...le2 }), [ie2, H2 == null ? void 0 : H2.heading, J2, G2, H2 == null ? void 0 : H2.heading]), wt2 = w.useCallback((le2 = {}) => ({ "data-open": je(J2), "data-disabled": je(G2), "data-slot": "title", className: ie2.title({ class: H2 == null ? void 0 : H2.title }), ...le2 }), [ie2, H2 == null ? void 0 : H2.title, J2, G2, H2 == null ? void 0 : H2.title]), bt = w.useCallback((le2 = {}) => ({ "data-open": je(J2), "data-disabled": je(G2), "data-slot": "subtitle", className: ie2.subtitle({ class: H2 == null ? void 0 : H2.subtitle }), ...le2 }), [ie2, H2, J2, G2, H2 == null ? void 0 : H2.subtitle]);
-    return { Component: Ze2, HeadingComponent: he2, item: x2, slots: ie2, classNames: H2, domRef: ae2, indicator: z, children: E2, title: j, subtitle: I, startContent: L2, isOpen: J2, isDisabled: G2, hideIndicator: Z2, keepContentMounted: q2, disableAnimation: U2, motionProps: N2, getBaseProps: Ke, getHeadingProps: ce3, getButtonProps: Ge2, getContentProps: vt2, getIndicatorProps: ke, getTitleProps: wt2, getSubtitleProps: bt };
+    return { Component: Ze2, HeadingComponent: he2, item: x2, slots: ie2, classNames: H2, domRef: ae2, indicator: z, children: E2, title: j, subtitle: N2, startContent: L2, isOpen: J2, isDisabled: G2, hideIndicator: Z2, keepContentMounted: q2, disableAnimation: U2, motionProps: I, getBaseProps: Ke, getHeadingProps: ce3, getButtonProps: Ge2, getContentProps: vt2, getIndicatorProps: ke, getTitleProps: wt2, getSubtitleProps: bt };
   }
   var ja = () => sc(() => Promise.resolve().then(() => (init_index_chunk(), index_chunk_exports)), __vite__mapDeps2([0, 1, 2])).then((i2) => i2.default);
   var tn2 = Sn2((i2, n) => {
-    const { Component: d2, HeadingComponent: p, classNames: u, slots: g2, indicator: x2, children: y2, title: k2, subtitle: h, startContent: z, isOpen: E2, isDisabled: j, hideIndicator: I, keepContentMounted: L2, disableAnimation: N2, motionProps: _3, getBaseProps: T2, getHeadingProps: M, getButtonProps: A2, getTitleProps: $, getSubtitleProps: Z2, getContentProps: U2, getIndicatorProps: q2 } = To({ ...i2, ref: n }), ge2 = ko(), de3 = w.useMemo(() => typeof x2 == "function" ? x2({ indicator: ne.jsx(Ra, {}), isOpen: E2, isDisabled: j }) : x2 || null, [x2, E2, j]) || ne.jsx(Ra, {}), we2 = w.useMemo(() => {
-      if (N2) return L2 ? ne.jsx("div", { ...U2(), children: y2 }) : E2 && ne.jsx("div", { ...U2(), children: y2 });
+    const { Component: d2, HeadingComponent: p, classNames: u, slots: g2, indicator: x2, children: y2, title: k2, subtitle: h, startContent: z, isOpen: E2, isDisabled: j, hideIndicator: N2, keepContentMounted: L2, disableAnimation: I, motionProps: _3, getBaseProps: T2, getHeadingProps: M, getButtonProps: A2, getTitleProps: $, getSubtitleProps: Z2, getContentProps: U2, getIndicatorProps: q2 } = To({ ...i2, ref: n }), ge2 = ko(), de3 = w.useMemo(() => typeof x2 == "function" ? x2({ indicator: ne.jsx(Ra, {}), isOpen: E2, isDisabled: j }) : x2 || null, [x2, E2, j]) || ne.jsx(Ra, {}), we2 = w.useMemo(() => {
+      if (I) return L2 ? ne.jsx("div", { ...U2(), children: y2 }) : E2 && ne.jsx("div", { ...U2(), children: y2 });
       const re2 = { exit: { ...z5.collapse.exit, overflowY: "hidden" }, enter: { ...z5.collapse.enter, overflowY: "unset" } };
       return L2 ? ne.jsx(Xu, { features: ja, children: ne.jsx(Ju.section, { animate: E2 ? "enter" : "exit", exit: "exit", initial: "exit", style: { willChange: ge2 }, variants: re2, onKeyDown: (Ce2) => {
         Ce2.stopPropagation();
       }, ..._3, children: ne.jsx("div", { ...U2(), children: y2 }) }, "accordion-content") }) : ne.jsx(Oh, { initial: false, children: E2 && ne.jsx(Xu, { features: ja, children: ne.jsx(Ju.section, { animate: "enter", exit: "exit", initial: "exit", style: { willChange: ge2 }, variants: re2, onKeyDown: (Ce2) => {
         Ce2.stopPropagation();
       }, ..._3, children: ne.jsx("div", { ...U2(), children: y2 }) }, "accordion-content") }) });
-    }, [E2, N2, L2, y2, _3]);
-    return ne.jsxs(d2, { ...T2(), children: [ne.jsx(p, { ...M(), children: ne.jsxs("button", { ...A2(), children: [z && ne.jsx("div", { className: g2.startContent({ class: u == null ? void 0 : u.startContent }), children: z }), ne.jsxs("div", { className: g2.titleWrapper({ class: u == null ? void 0 : u.titleWrapper }), children: [k2 && ne.jsx("span", { ...$(), children: k2 }), h && ne.jsx("span", { ...Z2(), children: h })] }), !I && de3 && ne.jsx("span", { ...q2(), children: de3 })] }) }), we2] });
+    }, [E2, I, L2, y2, _3]);
+    return ne.jsxs(d2, { ...T2(), children: [ne.jsx(p, { ...M(), children: ne.jsxs("button", { ...A2(), children: [z && ne.jsx("div", { className: g2.startContent({ class: u == null ? void 0 : u.startContent }), children: z }), ne.jsxs("div", { className: g2.titleWrapper({ class: u == null ? void 0 : u.titleWrapper }), children: [k2 && ne.jsx("span", { ...$(), children: k2 }), h && ne.jsx("span", { ...Z2(), children: h })] }), !N2 && de3 && ne.jsx("span", { ...q2(), children: de3 })] }) }), we2] });
   });
   tn2.displayName = "HeroUI.AccordionItem";
   var Po = tn2;
@@ -12015,7 +12015,7 @@ Error generating stack: ` + d2.message + `
   }
   function Mo(i2) {
     var n;
-    const d2 = Jo(), { ref: p, as: u, className: g2, items: x2, variant: y2, motionProps: k2, expandedKeys: h, disabledKeys: z, selectedKeys: E2, children: j, defaultExpandedKeys: I, selectionMode: L2 = "single", selectionBehavior: N2 = "toggle", keepContentMounted: _3 = false, disallowEmptySelection: T2, defaultSelectedKeys: M, onExpandedChange: A2, onSelectionChange: $, dividerProps: Z2 = {}, isCompact: U2 = false, isDisabled: q2 = false, showDivider: ge2 = true, hideIndicator: he2 = false, disableAnimation: de3 = (n = d2 == null ? void 0 : d2.disableAnimation) != null ? n : false, disableIndicatorAnimation: we2 = false, itemClasses: re2, ...Ce2 } = i2, [Ne, De2] = w.useState(null), _e = u || "div", Ze2 = typeof _e == "string", Ee3 = Gn(p), ae2 = w.useMemo(() => So({ variant: y2, className: g2 }), [y2, g2]), J2 = { children: w.useMemo(() => {
+    const d2 = Jo(), { ref: p, as: u, className: g2, items: x2, variant: y2, motionProps: k2, expandedKeys: h, disabledKeys: z, selectedKeys: E2, children: j, defaultExpandedKeys: N2, selectionMode: L2 = "single", selectionBehavior: I = "toggle", keepContentMounted: _3 = false, disallowEmptySelection: T2, defaultSelectedKeys: M, onExpandedChange: A2, onSelectionChange: $, dividerProps: Z2 = {}, isCompact: U2 = false, isDisabled: q2 = false, showDivider: ge2 = true, hideIndicator: he2 = false, disableAnimation: de3 = (n = d2 == null ? void 0 : d2.disableAnimation) != null ? n : false, disableIndicatorAnimation: we2 = false, itemClasses: re2, ...Ce2 } = i2, [Ne, De2] = w.useState(null), _e = u || "div", Ze2 = typeof _e == "string", Ee3 = Gn(p), ae2 = w.useMemo(() => So({ variant: y2, className: g2 }), [y2, g2]), J2 = { children: w.useMemo(() => {
       let ee = [];
       return Ce.Children.map(j, (se2) => {
         var fe2;
@@ -12024,7 +12024,7 @@ Error generating stack: ` + d2.message + `
           ee.push(Ae);
         } else ee.push(se2);
       }), ee;
-    }, [j]), items: x2 }, Ie2 = { expandedKeys: h, defaultExpandedKeys: I, onExpandedChange: A2 }, Le = { disabledKeys: z, selectedKeys: E2, selectionMode: L2, selectionBehavior: N2, disallowEmptySelection: T2, defaultSelectedKeys: M ?? I, onSelectionChange: $, ...J2, ...Ie2 }, ue2 = Ro(Le);
+    }, [j]), items: x2 }, Ie2 = { expandedKeys: h, defaultExpandedKeys: N2, onExpandedChange: A2 }, Le = { disabledKeys: z, selectedKeys: E2, selectionMode: L2, selectionBehavior: I, disallowEmptySelection: T2, defaultSelectedKeys: M ?? N2, onSelectionChange: $, ...J2, ...Ie2 }, ue2 = Ro(Le);
     ue2.selectionManager.setFocusedKey = (ee) => {
       De2(ee);
     };
@@ -12034,11 +12034,11 @@ Error generating stack: ` + d2.message + `
     return { Component: _e, values: Oe2, state: ue2, focusedKey: Ne, getBaseProps: Xe3, isSplitted: y2 === "splitted", classNames: ae2, showDivider: ge2, dividerProps: Z2, disableAnimation: de3, handleFocusChanged: $e3, itemClasses: re2 };
   }
   var rn3 = Sn2((i2, n) => {
-    const { Component: d2, values: p, state: u, isSplitted: g2, showDivider: x2, getBaseProps: y2, disableAnimation: k2, handleFocusChanged: h, itemClasses: z, dividerProps: E2 } = Mo({ ...i2, ref: n }), j = w.useCallback((L2, N2) => h(L2, N2), [h]), I = w.useMemo(() => [...u.collection].map((L2, N2) => {
+    const { Component: d2, values: p, state: u, isSplitted: g2, showDivider: x2, getBaseProps: y2, disableAnimation: k2, handleFocusChanged: h, itemClasses: z, dividerProps: E2 } = Mo({ ...i2, ref: n }), j = w.useCallback((L2, I) => h(L2, I), [h]), N2 = w.useMemo(() => [...u.collection].map((L2, I) => {
       const _3 = { ...z, ...L2.props.classNames || {} };
-      return ne.jsxs(w.Fragment, { children: [ne.jsx(Po, { item: L2, variant: i2.variant, onFocusChange: j, ...p, ...L2.props, classNames: _3 }), !L2.props.hidden && !g2 && x2 && N2 < u.collection.size - 1 && ne.jsx(Q5, { ...E2 })] }, L2.key);
+      return ne.jsxs(w.Fragment, { children: [ne.jsx(Po, { item: L2, variant: i2.variant, onFocusChange: j, ...p, ...L2.props, classNames: _3 }), !L2.props.hidden && !g2 && x2 && I < u.collection.size - 1 && ne.jsx(Q5, { ...E2 })] }, L2.key);
     }), [p, z, j, g2, x2, u.collection]);
-    return ne.jsx(d2, { ...y2(), children: k2 ? I : ne.jsx(N5, { children: I }) });
+    return ne.jsx(d2, { ...y2(), children: k2 ? N2 : ne.jsx(N5, { children: N2 }) });
   });
   rn3.displayName = "HeroUI.Accordion";
   var No = rn3;
@@ -12047,15 +12047,15 @@ Error generating stack: ` + d2.message + `
   var [Ao, an2] = Vi2({ name: "PopoverContext", errorMessage: "usePopoverContext: `context` is undefined. Seems you forgot to wrap all popover components within `<Popover />`" });
   var Ma = () => sc(() => Promise.resolve().then(() => (init_index_chunk(), index_chunk_exports)), __vite__mapDeps2([0, 1, 2])).then((i2) => i2.default);
   var nn2 = (i2) => {
-    const { as: n, children: d2, className: p, ...u } = i2, { Component: g2, placement: x2, backdrop: y2, motionProps: k2, disableAnimation: h, getPopoverProps: z, getDialogProps: E2, getBackdropProps: j, getContentProps: I, isNonModal: L2, onClose: N2 } = an2(), _3 = w.useRef(null), { dialogProps: T2, titleProps: M } = V5({}, _3), A2 = E2({ ref: _3, ...T2, ...u }), $ = n || g2 || "div", Z2 = d2 && ne.jsxs(ne.Fragment, { children: [!L2 && ne.jsx(I5, { onDismiss: N2 }), ne.jsx($, { ...A2, children: ne.jsx("div", { ...I({ className: p }), children: typeof d2 == "function" ? d2(M) : d2 }) }), ne.jsx(I5, { onDismiss: N2 })] }), U2 = w.useMemo(() => y2 === "transparent" ? null : h ? ne.jsx("div", { ...j() }) : ne.jsx(Xu, { features: Ma, children: ne.jsx(Ju.div, { animate: "enter", exit: "exit", initial: "exit", variants: z5.fade, ...j() }) }), [y2, h, j]), q2 = x2 ? Y5(x2 === "center" ? "top" : x2) : void 0, ge2 = ne.jsx(ne.Fragment, { children: h ? Z2 : ne.jsx(Xu, { features: Ma, children: ne.jsx(Ju.div, { animate: "enter", exit: "exit", initial: "initial", style: q2, variants: z5.scaleSpringOpacity, ...k2, children: Z2 }) }) });
+    const { as: n, children: d2, className: p, ...u } = i2, { Component: g2, placement: x2, backdrop: y2, motionProps: k2, disableAnimation: h, getPopoverProps: z, getDialogProps: E2, getBackdropProps: j, getContentProps: N2, isNonModal: L2, onClose: I } = an2(), _3 = w.useRef(null), { dialogProps: T2, titleProps: M } = V5({}, _3), A2 = E2({ ref: _3, ...T2, ...u }), $ = n || g2 || "div", Z2 = d2 && ne.jsxs(ne.Fragment, { children: [!L2 && ne.jsx(I5, { onDismiss: I }), ne.jsx($, { ...A2, children: ne.jsx("div", { ...N2({ className: p }), children: typeof d2 == "function" ? d2(M) : d2 }) }), ne.jsx(I5, { onDismiss: I })] }), U2 = w.useMemo(() => y2 === "transparent" ? null : h ? ne.jsx("div", { ...j() }) : ne.jsx(Xu, { features: Ma, children: ne.jsx(Ju.div, { animate: "enter", exit: "exit", initial: "exit", variants: z5.fade, ...j() }) }), [y2, h, j]), q2 = x2 ? Y5(x2 === "center" ? "top" : x2) : void 0, ge2 = ne.jsx(ne.Fragment, { children: h ? Z2 : ne.jsx(Xu, { features: Ma, children: ne.jsx(Ju.div, { animate: "enter", exit: "exit", initial: "initial", style: q2, variants: z5.scaleSpringOpacity, ...k2, children: Z2 }) }) });
     return ne.jsxs("div", { ...z(), children: [U2, ge2] });
   };
   nn2.displayName = "HeroUI.PopoverContent";
   var Bo2 = nn2;
   var on3 = (i2) => {
     var n;
-    const { triggerRef: d2, getTriggerProps: p } = an2(), { children: u, ...g2 } = i2, x2 = w.useMemo(() => typeof u == "string" ? ne.jsx("p", { children: u }) : w.Children.only(u), [u]), y2 = (n = x2.props.ref) != null ? n : x2.ref, { onPress: k2, isDisabled: h, ...z } = w.useMemo(() => p(ln2(g2, x2.props), y2), [p, x2.props, g2, y2]), [, E2] = A0(u, j5), { buttonProps: j } = hv({ onPress: k2, isDisabled: h }, d2), I = w.useMemo(() => (E2 == null ? void 0 : E2[0]) !== void 0, [E2]);
-    return I || delete z.preventFocusOnPress, w.cloneElement(x2, ln2(z, I ? { onPress: k2, isDisabled: h } : j));
+    const { triggerRef: d2, getTriggerProps: p } = an2(), { children: u, ...g2 } = i2, x2 = w.useMemo(() => typeof u == "string" ? ne.jsx("p", { children: u }) : w.Children.only(u), [u]), y2 = (n = x2.props.ref) != null ? n : x2.ref, { onPress: k2, isDisabled: h, ...z } = w.useMemo(() => p(ln2(g2, x2.props), y2), [p, x2.props, g2, y2]), [, E2] = A0(u, j5), { buttonProps: j } = hv({ onPress: k2, isDisabled: h }, d2), N2 = w.useMemo(() => (E2 == null ? void 0 : E2[0]) !== void 0, [E2]);
+    return N2 || delete z.preventFocusOnPress, w.cloneElement(x2, ln2(z, N2 ? { onPress: k2, isDisabled: h } : j));
   };
   on3.displayName = "HeroUI.PopoverTrigger";
   var Do = on3;
@@ -12128,11 +12128,11 @@ Error generating stack: ` + d2.message + `
         a = a + e.charAt(0).toUpperCase() + e.substring(1), E2[a] = E2[e];
       });
     });
-    var I = /["'&<>]/;
+    var N2 = /["'&<>]/;
     function L2(e) {
       if (typeof e == "boolean" || typeof e == "number") return "" + e;
       e = "" + e;
-      var a = I.exec(e);
+      var a = N2.exec(e);
       if (a) {
         var s = "", c, b2 = 0;
         for (c = a.index; c < e.length; c++) {
@@ -12161,7 +12161,7 @@ Error generating stack: ` + d2.message + `
       }
       return e;
     }
-    var N2 = /([A-Z])/g, _3 = /^ms-/, T2 = Array.isArray;
+    var I = /([A-Z])/g, _3 = /^ms-/, T2 = Array.isArray;
     function M(e, a) {
       return { insertionMode: e, selectedValue: a };
     }
@@ -12201,7 +12201,7 @@ Error generating stack: ` + d2.message + `
           } else {
             f2 = c;
             var S2 = $.get(f2);
-            S2 !== void 0 || (S2 = L2(f2.replace(N2, "-$1").toLowerCase().replace(_3, "-ms-")), $.set(f2, S2)), f2 = S2, b2 = typeof b2 == "number" ? b2 === 0 || d2.call(E2, c) ? "" + b2 : b2 + "px" : L2(("" + b2).trim());
+            S2 !== void 0 || (S2 = L2(f2.replace(I, "-$1").toLowerCase().replace(_3, "-ms-")), $.set(f2, S2)), f2 = S2, b2 = typeof b2 == "number" ? b2 === 0 || d2.call(E2, c) ? "" + b2 : b2 + "px" : L2(("" + b2).trim());
           }
           a ? (a = false, e.push(' style="', f2, ":", b2)) : e.push(";", f2, ":", b2);
         }
@@ -13250,9 +13250,9 @@ Error generating stack: ` + d2.message + `
     function z(t, r) {
       typeof t.error == "function" ? t.error(r) : t.close();
     }
-    var E2 = Object.prototype.hasOwnProperty, j = /^[:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD][:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*$/, I = {}, L2 = {};
-    function N2(t) {
-      return E2.call(L2, t) ? true : E2.call(I, t) ? false : j.test(t) ? L2[t] = true : (I[t] = true, false);
+    var E2 = Object.prototype.hasOwnProperty, j = /^[:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD][:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*$/, N2 = {}, L2 = {};
+    function I(t) {
+      return E2.call(L2, t) ? true : E2.call(N2, t) ? false : j.test(t) ? L2[t] = true : (N2[t] = true, false);
     }
     function _3(t, r, o, l2, w4, v, C2) {
       this.acceptsBooleans = r === 2 || r === 3 || r === 4, this.attributeName = l2, this.attributeNamespace = w4, this.mustUseProperty = o, this.propertyName = t, this.type = r, this.sanitizeURL = v, this.removeEmptyString = C2;
@@ -13437,7 +13437,7 @@ Error generating stack: ` + d2.message + `
             default:
               r.sanitizeURL && (l2 = "" + l2), t.push(ee, o, se2, k2(q2(l2)), fe2);
           }
-        } else if (N2(o)) {
+        } else if (I(o)) {
           switch (typeof l2) {
             case "function":
             case "symbol":
@@ -13684,7 +13684,7 @@ Error generating stack: ` + d2.message + `
             case "suppressHydrationWarning":
               break;
             default:
-              N2(W) && typeof P != "function" && typeof P != "symbol" && t.push(ee, k2(W), se2, k2(q2(P)), fe2);
+              I(W) && typeof P != "function" && typeof P != "symbol" && t.push(ee, k2(W), se2, k2(q2(P)), fe2);
           }
           return t.push(ye2), H2(t, C2, v), v;
       }
@@ -13882,20 +13882,20 @@ Error generating stack: ` + d2.message + `
       if (qe2 === null) throw Error(n(321));
       return qe2;
     }
-    function da() {
+    function ca() {
       if (0 < fr3) throw Error(n(312));
       return { memoizedState: null, queue: null, next: null };
     }
     function Hr2() {
-      return X2 === null ? gr3 === null ? (Ht2 = false, gr3 = X2 = da()) : (Ht2 = true, X2 = gr3) : X2.next === null ? (Ht2 = false, X2 = X2.next = da()) : (Ht2 = true, X2 = X2.next), X2;
+      return X2 === null ? gr3 === null ? (Ht2 = false, gr3 = X2 = ca()) : (Ht2 = true, X2 = gr3) : X2.next === null ? (Ht2 = false, X2 = X2.next = ca()) : (Ht2 = true, X2 = X2.next), X2;
     }
     function Wr3() {
       Kr2 = qe2 = null, hr3 = false, gr3 = null, fr3 = 0, X2 = tt = null;
     }
-    function ca(t, r) {
+    function ua(t, r) {
       return typeof r == "function" ? r(t) : r;
     }
-    function ua(t, r, o) {
+    function pa(t, r, o) {
       if (qe2 = gt2(), X2 = Hr2(), Ht2) {
         var l2 = X2.queue;
         if (r = l2.dispatch, tt !== null && (o = tt.get(l2), o !== void 0)) {
@@ -13907,9 +13907,9 @@ Error generating stack: ` + d2.message + `
         }
         return [X2.memoizedState, r];
       }
-      return t = t === ca ? typeof r == "function" ? r() : r : o !== void 0 ? o(r) : r, X2.memoizedState = t, t = X2.queue = { last: null, dispatch: null }, t = t.dispatch = En2.bind(null, qe2, t), [X2.memoizedState, t];
+      return t = t === ua ? typeof r == "function" ? r() : r : o !== void 0 ? o(r) : r, X2.memoizedState = t, t = X2.queue = { last: null, dispatch: null }, t = t.dispatch = En2.bind(null, qe2, t), [X2.memoizedState, t];
     }
-    function pa(t, r) {
+    function ga(t, r) {
       if (qe2 = gt2(), X2 = Hr2(), r = r === void 0 ? null : r, X2 !== null) {
         var o = X2.memoizedState;
         if (o !== null && r !== null) {
@@ -13940,19 +13940,19 @@ Error generating stack: ` + d2.message + `
     }
     function vr3() {
     }
-    var ga = { readContext: function(t) {
+    var ha = { readContext: function(t) {
       return t._currentValue;
     }, useContext: function(t) {
       return gt2(), t._currentValue;
-    }, useMemo: pa, useReducer: ua, useRef: function(t) {
+    }, useMemo: ga, useReducer: pa, useRef: function(t) {
       qe2 = gt2(), X2 = Hr2();
       var r = X2.memoizedState;
       return r === null ? (t = { current: t }, X2.memoizedState = t) : r;
     }, useState: function(t) {
-      return ua(ca, t);
+      return pa(ua, t);
     }, useInsertionEffect: vr3, useLayoutEffect: function() {
     }, useCallback: function(t, r) {
-      return pa(function() {
+      return ga(function() {
         return t;
       }, r);
     }, useImperativeHandle: vr3, useEffect: vr3, useDebugValue: vr3, useDeferredValue: function(t) {
@@ -13984,7 +13984,7 @@ Error generating stack: ` + d2.message + `
       t.allPendingTasks++, o === null ? t.pendingRootTasks++ : o.pendingTasks++;
       var D = { node: r, ping: function() {
         var W = t.pingedTasks;
-        W.push(D), W.length === 1 && xa(t);
+        W.push(D), W.length === 1 && ya(t);
       }, blockedBoundary: o, blockedSegment: l2, abortSet: w4, legacyContext: v, context: C2, treeContext: P };
       return w4.add(D), D;
     }
@@ -13999,11 +13999,11 @@ Error generating stack: ` + d2.message + `
       var o = t.onShellError;
       o(r), o = t.onFatalError, o(r), t.destination !== null ? (t.status = 2, z(t.destination, r)) : (t.status = 1, t.fatalError = r);
     }
-    function ha(t, r, o, l2, w4) {
+    function fa(t, r, o, l2, w4) {
       for (qe2 = {}, Kr2 = r, Wt2 = 0, t = o(l2, w4); hr3; ) hr3 = false, Wt2 = 0, fr3 += 1, X2 = null, t = o(l2, w4);
       return Wr3(), t;
     }
-    function fa(t, r, o, l2) {
+    function va(t, r, o, l2) {
       var w4 = o.render(), v = l2.childContextTypes;
       if (v != null) {
         var C2 = r.legacyContext;
@@ -14016,7 +14016,7 @@ Error generating stack: ` + d2.message + `
         r.legacyContext = l2, me2(t, r, w4), r.legacyContext = C2;
       } else me2(t, r, w4);
     }
-    function va(t, r) {
+    function wa(t, r) {
       if (t && t.defaultProps) {
         r = Qe2({}, r), t = t.defaultProps;
         for (var o in t) r[o] === void 0 && (r[o] = t[o]);
@@ -14028,11 +14028,11 @@ Error generating stack: ` + d2.message + `
       if (typeof o == "function") if (o.prototype && o.prototype.isReactComponent) {
         w4 = O3(o, r.legacyContext);
         var v = o.contextType;
-        v = new o(l2, typeof v == "object" && v !== null ? v._currentValue : w4), pt2(v, o, l2, w4), fa(t, r, v, o);
+        v = new o(l2, typeof v == "object" && v !== null ? v._currentValue : w4), pt2(v, o, l2, w4), va(t, r, v, o);
       } else {
-        v = O3(o, r.legacyContext), w4 = ha(t, r, o, l2, v);
+        v = O3(o, r.legacyContext), w4 = fa(t, r, o, l2, v);
         var C2 = Wt2 !== 0;
-        if (typeof w4 == "object" && w4 !== null && typeof w4.render == "function" && w4.$$typeof === void 0) pt2(w4, o, l2, v), fa(t, r, w4, o);
+        if (typeof w4 == "object" && w4 !== null && typeof w4.render == "function" && w4.$$typeof === void 0) pt2(w4, o, l2, v), va(t, r, w4, o);
         else if (C2) {
           l2 = r.treeContext, r.treeContext = et2(l2, 1, 0);
           try {
@@ -14098,7 +14098,7 @@ Error generating stack: ` + d2.message + `
         }
         if (typeof o == "object" && o !== null) switch (o.$$typeof) {
           case dr3:
-            if (l2 = ha(t, r, o.render, l2, w4), Wt2 !== 0) {
+            if (l2 = fa(t, r, o.render, l2, w4), Wt2 !== 0) {
               o = r.treeContext, r.treeContext = et2(o, 1, 0);
               try {
                 me2(t, r, l2);
@@ -14108,7 +14108,7 @@ Error generating stack: ` + d2.message + `
             } else me2(t, r, l2);
             return;
           case e:
-            o = o.type, l2 = va(o, l2), Zr2(t, r, o, l2, w4);
+            o = o.type, l2 = wa(o, l2), Zr2(t, r, o, l2, w4);
             return;
           case $t3:
             if (w4 = l2.children, o = o._context, l2 = l2.value, v = o._currentValue, o._currentValue = l2, C2 = V, V = l2 = { parent: C2, depth: C2 === null ? 0 : C2.depth + 1, context: o, parentValue: v, value: l2 }, r.context = l2, me2(t, r, w4), t = V, t === null) throw Error(n(403));
@@ -14118,7 +14118,7 @@ Error generating stack: ` + d2.message + `
             l2 = l2.children, l2 = l2(o._currentValue), me2(t, r, l2);
             return;
           case a:
-            w4 = o._init, o = w4(o._payload), l2 = va(o, l2), Zr2(t, r, o, l2, void 0);
+            w4 = o._init, o = w4(o._payload), l2 = wa(o, l2), Zr2(t, r, o, l2, void 0);
             return;
         }
         throw Error(n(130, o == null ? o : typeof o, ""));
@@ -14138,7 +14138,7 @@ Error generating stack: ` + d2.message + `
             return;
         }
         if (de3(o)) {
-          wa(t, r, o);
+          ba(t, r, o);
           return;
         }
         if (o === null || typeof o != "object" ? l2 = null : (l2 = S2 && o[S2] || o["@@iterator"], l2 = typeof l2 == "function" ? l2 : null), l2 && (l2 = l2.call(o))) {
@@ -14147,7 +14147,7 @@ Error generating stack: ` + d2.message + `
             do
               w4.push(o.value), o = l2.next();
             while (!o.done);
-            wa(t, r, w4);
+            ba(t, r, w4);
           }
           return;
         }
@@ -14155,7 +14155,7 @@ Error generating stack: ` + d2.message + `
       }
       typeof o == "string" ? (l2 = r.blockedSegment, l2.lastPushedText = Le(r.blockedSegment.chunks, o, t.responseState, l2.lastPushedText)) : typeof o == "number" && (l2 = r.blockedSegment, l2.lastPushedText = Le(r.blockedSegment.chunks, "" + o, t.responseState, l2.lastPushedText));
     }
-    function wa(t, r, o) {
+    function ba(t, r, o) {
       for (var l2 = o.length, w4 = 0; w4 < l2; w4++) {
         var v = r.treeContext;
         r.treeContext = et2(v, l2, w4);
@@ -14180,12 +14180,12 @@ Error generating stack: ` + d2.message + `
     }
     function Fn2(t) {
       var r = t.blockedBoundary;
-      t = t.blockedSegment, t.status = 3, ma(this, r, t);
+      t = t.blockedSegment, t.status = 3, xa(this, r, t);
     }
-    function ba(t, r, o) {
+    function ma(t, r, o) {
       var l2 = t.blockedBoundary;
       t.blockedSegment.status = 3, l2 === null ? (r.allPendingTasks--, r.status !== 2 && (r.status = 2, r.destination !== null && r.destination.close())) : (l2.pendingTasks--, l2.forceClientRender || (l2.forceClientRender = true, t = o === void 0 ? Error(n(432)) : o, l2.errorDigest = r.onError(t), l2.parentFlushed && r.clientRenderedBoundaries.push(l2)), l2.fallbackAbortableTasks.forEach(function(w4) {
-        return ba(w4, r, o);
+        return ma(w4, r, o);
       }), l2.fallbackAbortableTasks.clear(), r.allPendingTasks--, r.allPendingTasks === 0 && (l2 = r.onAllReady, l2()));
     }
     function xr2(t, r) {
@@ -14194,7 +14194,7 @@ Error generating stack: ` + d2.message + `
         o.id = r.id, o.parentFlushed = true, o.status === 1 && xr2(t, o);
       } else t.completedSegments.push(r);
     }
-    function ma(t, r, o) {
+    function xa(t, r, o) {
       if (r === null) {
         if (o.parentFlushed) {
           if (t.completedRootSegment !== null) throw Error(n(389));
@@ -14204,10 +14204,10 @@ Error generating stack: ` + d2.message + `
       } else r.pendingTasks--, r.forceClientRender || (r.pendingTasks === 0 ? (o.parentFlushed && o.status === 1 && xr2(r, o), r.parentFlushed && t.completedBoundaries.push(r), r.fallbackAbortableTasks.forEach(Fn2, t), r.fallbackAbortableTasks.clear()) : o.parentFlushed && o.status === 1 && (xr2(r, o), r.completedSegments.length === 1 && r.parentFlushed && t.partialBoundaries.push(r)));
       t.allPendingTasks--, t.allPendingTasks === 0 && (t = t.onAllReady, t());
     }
-    function xa(t) {
+    function ya(t) {
       if (t.status !== 2) {
         var r = V, o = Ur3.current;
-        Ur3.current = ga;
+        Ur3.current = ha;
         var l2 = wr2;
         wr2 = t.responseState;
         try {
@@ -14217,7 +14217,7 @@ Error generating stack: ` + d2.message + `
             if (D.status === 0) {
               Ue2(C2.context);
               try {
-                me2(P, C2, C2.node), D.lastPushedText && D.textEmbedded && D.chunks.push(Ie2), C2.abortSet.delete(C2), D.status = 1, ma(P, C2.blockedBoundary, D);
+                me2(P, C2, C2.node), D.lastPushedText && D.textEmbedded && D.chunks.push(Ie2), C2.abortSet.delete(C2), D.status = 1, xa(P, C2.blockedBoundary, D);
               } catch (Fe3) {
                 if (Wr3(), typeof Fe3 == "object" && Fe3 !== null && typeof Fe3.then == "function") {
                   var W = C2.ping;
@@ -14238,7 +14238,7 @@ Error generating stack: ` + d2.message + `
         } catch (Fe3) {
           qt2(t, Fe3), mr3(t, Fe3);
         } finally {
-          wr2 = l2, Ur3.current = o, o === ga && Ue2(r);
+          wr2 = l2, Ur3.current = o, o === ha && Ue2(r);
         }
       }
     }
@@ -14278,22 +14278,22 @@ Error generating stack: ` + d2.message + `
       }
       return g2(r, Nr2);
     }
-    function ya(t, r, o) {
+    function ka(t, r, o) {
       return $r2(r, t.responseState, o.formatContext, o.id), kr2(t, r, o), it(r, o.formatContext);
     }
-    function ka(t, r, o) {
-      for (var l2 = o.completedSegments, w4 = 0; w4 < l2.length; w4++) Sa(t, r, o, l2[w4]);
+    function Sa(t, r, o) {
+      for (var l2 = o.completedSegments, w4 = 0; w4 < l2.length; w4++) Ca(t, r, o, l2[w4]);
       if (l2.length = 0, t = t.responseState, l2 = o.id, o = o.rootSegmentID, u(r, t.startInlineScript), t.sentCompleteBoundaryFunction ? u(r, ar3) : (t.sentCompleteBoundaryFunction = true, u(r, Et3)), l2 === null) throw Error(n(395));
       return o = k2(o.toString(16)), u(r, l2), u(r, nr2), u(r, t.segmentPrefix), u(r, o), g2(r, or2);
     }
-    function Sa(t, r, o, l2) {
+    function Ca(t, r, o, l2) {
       if (l2.status === 2) return true;
       var w4 = l2.id;
       if (w4 === -1) {
         if ((l2.id = o.rootSegmentID) === -1) throw Error(n(392));
-        return ya(t, r, l2);
+        return ka(t, r, l2);
       }
-      return ya(t, r, l2), t = t.responseState, u(r, t.startInlineScript), t.sentCompleteSegmentFunction ? u(r, It2) : (t.sentCompleteSegmentFunction = true, u(r, Vr2)), u(r, t.segmentPrefix), w4 = k2(w4.toString(16)), u(r, w4), u(r, _t2), u(r, t.placeholderPrefix), u(r, w4), g2(r, lt);
+      return ka(t, r, l2), t = t.responseState, u(r, t.startInlineScript), t.sentCompleteSegmentFunction ? u(r, It2) : (t.sentCompleteSegmentFunction = true, u(r, Vr2)), u(r, t.segmentPrefix), w4 = k2(w4.toString(16)), u(r, w4), u(r, _t2), u(r, t.placeholderPrefix), u(r, w4), g2(r, lt);
     }
     function Xr2(t, r) {
       d2 = new Uint8Array(512), p = 0;
@@ -14315,7 +14315,7 @@ Error generating stack: ` + d2.message + `
         }
         w4.splice(0, v);
         var xe = t.completedBoundaries;
-        for (v = 0; v < xe.length; v++) ka(t, r, xe[v]);
+        for (v = 0; v < xe.length; v++) Sa(t, r, xe[v]);
         xe.splice(0, v), x2(r), d2 = new Uint8Array(512), p = 0;
         var Pe = t.partialBoundaries;
         for (v = 0; v < Pe.length; v++) {
@@ -14323,31 +14323,31 @@ Error generating stack: ` + d2.message + `
           e: {
             w4 = t, C2 = r;
             var Sr2 = Fe3.completedSegments;
-            for (P = 0; P < Sr2.length; P++) if (!Sa(w4, C2, Fe3, Sr2[P])) {
+            for (P = 0; P < Sr2.length; P++) if (!Ca(w4, C2, Fe3, Sr2[P])) {
               P++, Sr2.splice(0, P);
-              var _a = false;
+              var Ea = false;
               break e;
             }
-            Sr2.splice(0, P), _a = true;
+            Sr2.splice(0, P), Ea = true;
           }
-          if (!_a) {
+          if (!Ea) {
             t.destination = null, v++, Pe.splice(0, v);
             return;
           }
         }
         Pe.splice(0, v);
         var Gr3 = t.completedBoundaries;
-        for (v = 0; v < Gr3.length; v++) ka(t, r, Gr3[v]);
+        for (v = 0; v < Gr3.length; v++) Sa(t, r, Gr3[v]);
         Gr3.splice(0, v);
       } finally {
         x2(r), t.allPendingTasks === 0 && t.pingedTasks.length === 0 && t.clientRenderedBoundaries.length === 0 && t.completedBoundaries.length === 0 && r.close();
       }
     }
-    function Ca(t, r) {
+    function _a(t, r) {
       try {
         var o = t.abortableTasks;
         o.forEach(function(l2) {
-          return ba(l2, t, r);
+          return ma(l2, t, r);
         }), o.clear(), t.destination !== null && Xr2(t, t.destination);
       } catch (l2) {
         qt2(t, l2), mr3(t, l2);
@@ -14369,7 +14369,7 @@ Error generating stack: ` + d2.message + `
               }
             }
           }, cancel: function() {
-            Ca(P);
+            _a(P);
           } }, { highWaterMark: 0 });
           K.allReady = C2, o(K);
         }, function(K) {
@@ -14378,11 +14378,11 @@ Error generating stack: ` + d2.message + `
         }, w4);
         if (r && r.signal) {
           var D = r.signal, W = function() {
-            Ca(P, D.reason), D.removeEventListener("abort", W);
+            _a(P, D.reason), D.removeEventListener("abort", W);
           };
           D.addEventListener("abort", W);
         }
-        xa(P);
+        ya(P);
       });
     }, Cr2.version = "18.3.1", Cr2;
   }
@@ -14394,26 +14394,26 @@ Error generating stack: ` + d2.message + `
     return i2 = $o(), n = Vo2(), rt2.version = i2.version, rt2.renderToString = i2.renderToString, rt2.renderToStaticMarkup = i2.renderToStaticMarkup, rt2.renderToNodeStream = i2.renderToNodeStream, rt2.renderToStaticNodeStream = i2.renderToStaticNodeStream, rt2.renderToReadableStream = n.renderToReadableStream, rt2;
   }
   var Ho2 = Ko2();
-  var Jr2 = { exports: {} };
-  var Qr2;
+  var Qr2 = { exports: {} };
+  var ea;
   var Aa;
   function Wo2() {
-    if (Aa) return Qr2;
+    if (Aa) return ea;
     Aa = 1;
     var i2 = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
-    return Qr2 = i2, Qr2;
+    return ea = i2, ea;
   }
-  var ea;
+  var ta;
   var Ba;
   function Uo2() {
-    if (Ba) return ea;
+    if (Ba) return ta;
     Ba = 1;
     var i2 = Wo2();
     function n() {
     }
     function d2() {
     }
-    return d2.resetWarningCache = n, ea = function() {
+    return d2.resetWarningCache = n, ta = function() {
       function p(x2, y2, k2, h, z, E2) {
         if (E2 !== i2) {
           var j = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
@@ -14426,11 +14426,11 @@ Error generating stack: ` + d2.message + `
       }
       var g2 = { array: p, bigint: p, bool: p, func: p, number: p, object: p, string: p, symbol: p, any: p, arrayOf: u, element: p, elementType: p, instanceOf: u, node: p, objectOf: u, oneOf: u, oneOfType: u, shape: u, exact: u, checkPropTypes: d2, resetWarningCache: n };
       return g2.PropTypes = g2, g2;
-    }, ea;
+    }, ta;
   }
   var Da;
   function qo2() {
-    return Da || (Da = 1, Jr2.exports = Uo2()()), Jr2.exports;
+    return Da || (Da = 1, Qr2.exports = Uo2()()), Qr2.exports;
   }
   var Zo2 = qo2();
   var je2 = Fu(Zo2);
@@ -14447,7 +14447,7 @@ Error generating stack: ` + d2.message + `
         else for (var U2 in A2 = {}, T2) Object.prototype.hasOwnProperty.call(T2, U2) && (A2[_3(U2, M)] = d2(_3, T2[U2], M));
         return A2;
       }, p = function(_3) {
-        return I(_3) ? _3 : (_3 = _3.replace(/[\-_\s]+(.)?/g, (function(T2, M) {
+        return N2(_3) ? _3 : (_3 = _3.replace(/[\-_\s]+(.)?/g, (function(T2, M) {
           return M ? M.toUpperCase() : "";
         }))).substr(0, 1).toLowerCase() + _3.substr(1);
       }, u = function(_3) {
@@ -14470,14 +14470,14 @@ Error generating stack: ` + d2.message + `
         return x2.call(_3) == "[object RegExp]";
       }, j = function(_3) {
         return x2.call(_3) == "[object Boolean]";
-      }, I = function(_3) {
+      }, N2 = function(_3) {
         return (_3 -= 0) == _3;
       }, L2 = function(_3, T2) {
         var M = T2 && "process" in T2 ? T2.process : T2;
         return typeof M != "function" ? _3 : function(A2, $) {
           return M(A2, _3, $);
         };
-      }, N2 = { camelize: p, decamelize: g2, pascalize: u, depascalize: g2, camelizeKeys: function(_3, T2) {
+      }, I = { camelize: p, decamelize: g2, pascalize: u, depascalize: g2, camelizeKeys: function(_3, T2) {
         return d2(L2(p, T2), _3);
       }, decamelizeKeys: function(_3, T2) {
         return d2(L2(g2, T2), _3, T2);
@@ -14486,7 +14486,7 @@ Error generating stack: ` + d2.message + `
       }, depascalizeKeys: function() {
         return this.decamelizeKeys.apply(this, arguments);
       } };
-      i2.exports ? i2.exports = N2 : n.humps = N2;
+      i2.exports ? i2.exports = I : n.humps = I;
     })(Yo2);
   })).decamelize;
   var Go2 = function(i2) {
@@ -14566,12 +14566,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   }
   function as(i2) {
     var n = w.forwardRef((function(d2, p) {
-      var u, g2, x2 = d2.mode, y2 = x2 === void 0 ? "open" : x2, k2 = d2.delegatesFocus, h = k2 !== void 0 && k2, z = d2.styleSheets, E2 = z === void 0 ? [] : z, j = d2.ssr, I = j !== void 0 && j, L2 = d2.children, N2 = cn2(d2, ["mode", "delegatesFocus", "styleSheets", "ssr", "children"]), _3 = (g2 = w.useRef((u = p) && u.current), w.useEffect((function() {
+      var u, g2, x2 = d2.mode, y2 = x2 === void 0 ? "open" : x2, k2 = d2.delegatesFocus, h = k2 !== void 0 && k2, z = d2.styleSheets, E2 = z === void 0 ? [] : z, j = d2.ssr, N2 = j !== void 0 && j, L2 = d2.children, I = cn2(d2, ["mode", "delegatesFocus", "styleSheets", "ssr", "children"]), _3 = (g2 = w.useRef((u = p) && u.current), w.useEffect((function() {
         u && (u.current = g2.current);
       }), [u]), g2), T2 = w.useState(null), M = ts2(T2, 2), A2 = M[0], $ = M[1], Z2 = "node_".concat(y2).concat(h);
       return w.useLayoutEffect((function() {
         if (_3.current) try {
-          if (typeof p == "function" && p(_3.current), I) {
+          if (typeof p == "function" && p(_3.current), N2) {
             var U2 = _3.current.shadowRoot;
             return void $(U2);
           }
@@ -14589,12 +14589,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             }
           })({ error: ge2, styleSheets: E2, root: A2 });
         }
-      }), [p, _3, E2]), Ce.createElement(Ce.Fragment, null, Ce.createElement(i2.tag, dn2({ key: Z2, ref: _3 }, N2), (A2 || I) && Ce.createElement(un2.Provider, { value: A2 }, I ? Ce.createElement(pn2, { shadowroot: y2, shadowrootmode: y2 }, i2.render({ root: A2, ssr: I, children: L2 })) : Ce.createElement(gn3, { root: A2 }, i2.render({ root: A2, ssr: I, children: L2 })))));
+      }), [p, _3, E2]), Ce.createElement(Ce.Fragment, null, Ce.createElement(i2.tag, dn2({ key: Z2, ref: _3 }, I), (A2 || N2) && Ce.createElement(un2.Provider, { value: A2 }, N2 ? Ce.createElement(pn2, { shadowroot: y2, shadowrootmode: y2 }, i2.render({ root: A2, ssr: N2, children: L2 })) : Ce.createElement(gn3, { root: A2 }, i2.render({ root: A2, ssr: N2, children: L2 })))));
     }));
     return n.propTypes = { mode: je2.oneOf(["open", "closed"]), delegatesFocus: je2.bool, styleSheets: je2.arrayOf(je2.instanceOf(globalThis.CSSStyleSheet)), ssr: je2.bool, children: je2.node }, n;
   }
   pn2.propTypes = { children: je2.oneOfType([je2.string, je2.node]) }, gn3.propTypes = { root: je2.object.isRequired, children: je2.node };
-  var ta = /* @__PURE__ */ new Map();
+  var ra = /* @__PURE__ */ new Map();
   function ns() {
     return w.useContext(un2);
   }
@@ -14604,32 +14604,32 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     };
     return new Proxy(i2, { get: function(p, u) {
       var g2 = Xo2(u, { separator: "-" }), x2 = "".concat(n, "-").concat(g2);
-      return ta.has(x2) || ta.set(x2, as({ tag: g2, render: d2 })), ta.get(x2);
+      return ra.has(x2) || ra.set(x2, as({ tag: g2, render: d2 })), ra.get(x2);
     } });
   }
   var ss = os();
-  var ra;
+  var aa;
   var $a;
   function is() {
-    if ($a) return ra;
+    if ($a) return aa;
     $a = 1;
     var i2 = ["onAbort", "onAnimationCancel", "onAnimationEnd", "onAnimationIteration", "onAuxClick", "onBlur", "onChange", "onClick", "onClose", "onContextMenu", "onDoubleClick", "onError", "onFocus", "onGotPointerCapture", "onInput", "onKeyDown", "onKeyPress", "onKeyUp", "onLoad", "onLoadEnd", "onLoadStart", "onLostPointerCapture", "onMouseDown", "onMouseMove", "onMouseOut", "onMouseOver", "onMouseUp", "onPointerCancel", "onPointerDown", "onPointerEnter", "onPointerLeave", "onPointerMove", "onPointerOut", "onPointerOver", "onPointerUp", "onReset", "onResize", "onScroll", "onSelect", "onSelectionChange", "onSelectStart", "onSubmit", "onTouchCancel", "onTouchMove", "onTouchStart", "onTouchEnd", "onTransitionCancel", "onTransitionEnd", "onDrag", "onDragEnd", "onDragEnter", "onDragExit", "onDragLeave", "onDragOver", "onDragStart", "onDrop", "onFocusOut"], n = { onDoubleClick: "dblclick" }, d2 = { onInput: "onChange", onFocusOut: "onBlur", onSelectionChange: "onSelect" };
-    ra = function(E2) {
+    aa = function(E2) {
       var j = [];
-      return i2.forEach(function(I) {
-        var L2 = k2(I);
-        function N2(_3) {
+      return i2.forEach(function(N2) {
+        var L2 = k2(N2);
+        function I(_3) {
           for (var T2 = _3.path || _3.composedPath && _3.composedPath() || h(_3.target), M = 0; M < T2.length; M++) {
             var A2 = T2[M], $ = null, Z2 = u(A2), U2 = p(A2);
-            if (U2 ? $ = U2 : $ = x2(Z2), Z2 && $ && y2(_3, I, $), Z2 && $ && d2[I] && y2(_3, d2[I], $), _3.cancelBubble || A2 === E2) break;
+            if (U2 ? $ = U2 : $ = x2(Z2), Z2 && $ && y2(_3, N2, $), Z2 && $ && d2[N2] && y2(_3, d2[N2], $), _3.cancelBubble || A2 === E2) break;
           }
         }
-        E2.addEventListener(L2, N2, false), j.push(function() {
-          E2.removeEventListener(L2, N2, false);
+        E2.addEventListener(L2, I, false), j.push(function() {
+          E2.removeEventListener(L2, I, false);
         });
       }), function() {
-        j.forEach(function(I) {
-          I();
+        j.forEach(function(N2) {
+          N2();
         });
       };
     };
@@ -14664,7 +14664,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         z = z.parentElement;
       }
     }
-    return ra;
+    return aa;
   }
   var ls2 = is();
   var ds2 = Fu(ls2);
@@ -14763,7 +14763,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     const n = i2.trim();
     return new RegExp("^\\p{Lu}\\p{Ll}*$", "u").test(n);
   };
-  var oa = ((i2) => (i2[i2.SiliconFlow = 0] = "SiliconFlow", i2[i2.BigModel = 1] = "BigModel", i2))(oa || {});
+  var sa = ((i2) => (i2[i2.SiliconFlow = 0] = "SiliconFlow", i2[i2.BigModel = 1] = "BigModel", i2))(sa || {});
   var Cs2 = { 0: { id: "SiliconFlow", url: "https://api.siliconflow.cn/v1/chat/completions", model: "THUDM/glm-4-9b-chat", token: "Bearer sk-oasjdyyyitxddeyxxjwt" }, 1: { id: "GLM-4 Flash", url: "https://open.bigmodel.cn/api/paas/v4/chat/completions", model: "glm-4-flash-250414", token: "Bearer f1987d86479f430491bb5210379b814f.Jh99XCkw0kS7tLiN" } };
   var Ha = class {
     constructor(n, d2, p) {
@@ -14774,11 +14774,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       this.translateSetting = Cs2[n], this.promptBuilder = new C(this.translateSetting.model, new O2(d2), p), this.enableStream = p;
     }
     async translate(n) {
-      var k2, h, z, E2, j, I;
+      var k2, h, z, E2, j, N2;
       const d2 = this.promptBuilder.getPrompt(n), p = await fetch(this.translateSetting.url, { method: "POST", headers: { "Content-Type": "application/json", Authorization: this.translateSetting.token }, body: JSON.stringify({ model: d2.model, messages: d2.messages, stream: this.enableStream }) });
       if (!p.ok) throw new Error(`Translation request failed: ${p.status} ${p.statusText}`);
       const u = await p.json();
-      let g2 = ((z = (h = (k2 = u == null ? void 0 : u.choices) == null ? void 0 : k2[0]) == null ? void 0 : h.message) == null ? void 0 : z.content) ?? ((I = (j = (E2 = u == null ? void 0 : u.choices) == null ? void 0 : E2[0]) == null ? void 0 : j.delta) == null ? void 0 : I.content) ?? "";
+      let g2 = ((z = (h = (k2 = u == null ? void 0 : u.choices) == null ? void 0 : k2[0]) == null ? void 0 : h.message) == null ? void 0 : z.content) ?? ((N2 = (j = (E2 = u == null ? void 0 : u.choices) == null ? void 0 : E2[0]) == null ? void 0 : j.delta) == null ? void 0 : N2.content) ?? "";
       const x2 = /```json\s*([\s\S]*?)\s*```/, y2 = g2.match(x2);
       return console.log("reg matched, match: ", y2), y2 && (g2 = y2[1]), this.parseResponse(g2, n);
     }
@@ -14791,7 +14791,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         var g2;
         (g2 = d2.onError) == null || g2.call(d2, u);
       }, onEvent: (u) => {
-        var g2, x2, y2, k2, h, z, E2, j, I, L2, N2;
+        var g2, x2, y2, k2, h, z, E2, j, N2, L2, I;
         if (this.enableStream) try {
           if (u.data.trim() !== "[DONE]") {
             const _3 = JSON.parse(u.data), T2 = ((y2 = (x2 = (g2 = _3 == null ? void 0 : _3.choices) == null ? void 0 : g2[0]) == null ? void 0 : x2.delta) == null ? void 0 : y2.content) ?? ((z = (h = (k2 = _3 == null ? void 0 : _3.choices) == null ? void 0 : k2[0]) == null ? void 0 : h.message) == null ? void 0 : z.content) ?? "";
@@ -14800,8 +14800,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         } catch {
         }
         else try {
-          const _3 = JSON.parse(u.data), T2 = ((L2 = (I = (j = _3 == null ? void 0 : _3.choices) == null ? void 0 : j[0]) == null ? void 0 : I.message) == null ? void 0 : L2.content) ?? "";
-          p = T2, (N2 = d2.onEvent) == null || N2.call(d2, { data: T2 });
+          const _3 = JSON.parse(u.data), T2 = ((L2 = (N2 = (j = _3 == null ? void 0 : _3.choices) == null ? void 0 : j[0]) == null ? void 0 : N2.message) == null ? void 0 : L2.content) ?? "";
+          p = T2, (I = d2.onEvent) == null || I.call(d2, { data: T2 });
         } catch {
         }
       } }), this.streamChat.start().catch(d2.onError);
@@ -14809,17 +14809,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     streamParse(n, d2, p) {
       let u = "";
       this.streamChat = new k(this.translateSetting.url, this.translateSetting.token, this.promptBuilder.getPrompt(n), { onEvent: (g2) => {
-        var x2, y2, k2, h, z, E2, j, I, L2;
+        var x2, y2, k2, h, z, E2, j, N2, L2;
         if (this.enableStream) try {
           if (g2.data.trim() !== "[DONE]") {
-            const N2 = JSON.parse(g2.data), _3 = ((k2 = (y2 = (x2 = N2 == null ? void 0 : N2.choices) == null ? void 0 : x2[0]) == null ? void 0 : y2.delta) == null ? void 0 : k2.content) ?? ((E2 = (z = (h = N2 == null ? void 0 : N2.choices) == null ? void 0 : h[0]) == null ? void 0 : z.message) == null ? void 0 : E2.content) ?? "";
+            const I = JSON.parse(g2.data), _3 = ((k2 = (y2 = (x2 = I == null ? void 0 : I.choices) == null ? void 0 : x2[0]) == null ? void 0 : y2.delta) == null ? void 0 : k2.content) ?? ((E2 = (z = (h = I == null ? void 0 : I.choices) == null ? void 0 : h[0]) == null ? void 0 : z.message) == null ? void 0 : E2.content) ?? "";
             _3 && (u += _3, p.parseTo(u, d2));
           }
         } catch {
         }
         else try {
-          const N2 = JSON.parse(g2.data);
-          u = ((L2 = (I = (j = N2 == null ? void 0 : N2.choices) == null ? void 0 : j[0]) == null ? void 0 : I.message) == null ? void 0 : L2.content) ?? "", p.parseTo(u, d2);
+          const I = JSON.parse(g2.data);
+          u = ((L2 = (N2 = (j = I == null ? void 0 : I.choices) == null ? void 0 : j[0]) == null ? void 0 : N2.message) == null ? void 0 : L2.content) ?? "", p.parseTo(u, d2);
         } catch {
         }
       } }), this.streamChat.start();
@@ -14840,7 +14840,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       const x2 = (h) => {
         const z = (E2) => E2 && E2.phonetic;
         if (h && h.definitions && h.definitions.length > 0) {
-          const E2 = h.definitions.map((I) => ({ pos: I.pos, translation: I.meaning })), j = h.definitions.map((I) => I.example);
+          const E2 = h.definitions.map((N2) => ({ pos: N2.pos, translation: N2.meaning })), j = h.definitions.map((N2) => N2.example);
           return { phonetic: z(h), dictionary: E2, examples: j };
         } else return;
       };
@@ -14914,7 +14914,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     const u = d2 > 0 && p !== -1 ? i2.slice(p) : "";
     return { results: n, remainder: u };
   };
-  var sa = ((i2) => (i2[i2.SiliconFlow = 0] = "SiliconFlow", i2[i2.BigModel = 1] = "BigModel", i2))(sa || {});
+  var ia = ((i2) => (i2[i2.SiliconFlow = 0] = "SiliconFlow", i2[i2.BigModel = 1] = "BigModel", i2))(ia || {});
   var Wa2 = class {
     constructor(n, d2) {
       pe2(this, "basicTranslator");
@@ -14941,10 +14941,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       const p = Object.keys(zx).find((u) => zx[u] === d2);
       if (p) switch (this.basicTranslator = new hs2(d2), n) {
         case 0:
-          this.additionalTranslator = new Ha(oa.SiliconFlow, p, true);
+          this.additionalTranslator = new Ha(sa.SiliconFlow, p, true);
           break;
         case 1:
-          this.additionalTranslator = new Ha(oa.BigModel, p, true);
+          this.additionalTranslator = new Ha(sa.BigModel, p, true);
           break;
         default:
           throw new Error("Unknown translateEngine");
@@ -14974,7 +14974,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   var Pr2 = w.forwardRef(({ children: i2, ...n }, d2) => {
     const u = w.Children.toArray(i2).filter((h) => w.isValidElement(h) && h.type.displayName === "Accordion.Item"), g2 = w.useRef([]), [x2, y2] = w.useState(() => n.isOpen ? u.map((h, z) => String(z)) : n.defaultSelectedKeys ?? []), k2 = (h) => {
       y2((z) => {
-        if (z === "all") return u.map((j, I) => String(I)).filter((j) => j !== h);
+        if (z === "all") return u.map((j, N2) => String(N2)).filter((j) => j !== h);
         const E2 = Array.from(z);
         return E2.includes(h) ? E2.filter((j) => j !== h) : [...E2, h];
       });
@@ -15012,22 +15012,22 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     return ne.jsx("div", { className: "text-current/20 group-hover:text-current/40 cursor-move select-none", onMouseDown: u, children: ne.jsx(d5, {}) });
   };
   var Fr2 = ((i2) => (i2[i2.Word = 0] = "Word", i2[i2.Sentence = 1] = "Sentence", i2))(Fr2 || {});
-  var la = ({ children: i2 }) => ne.jsx(ne.Fragment, { children: i2 });
-  la.displayName = "TranslateWindow.Content";
+  var da = ({ children: i2 }) => ne.jsx(ne.Fragment, { children: i2 });
+  da.displayName = "TranslateWindow.Content";
   function bn3(i2) {
     return i2 == null || i2 === false ? true : typeof i2 == "string" ? i2.trim() === "" : Array.isArray(i2) ? i2.every(bn3) : false;
   }
   var Rr2 = Object.assign(({ isLoaded: i2, windowMode: n, children: d2 }) => {
     const u = w.Children.toArray(d2).filter((g2) => {
       var x2;
-      return w.isValidElement(g2) && g2.type.displayName === la.displayName && !bn3((x2 = g2.props) == null ? void 0 : x2.children);
+      return w.isValidElement(g2) && g2.type.displayName === da.displayName && !bn3((x2 = g2.props) == null ? void 0 : x2.children);
     });
     return ne.jsxs(ne.Fragment, { children: [ne.jsxs("div", { onMouseDown: (g2) => {
       g2.preventDefault();
     }, className: by("flex flex-col gap-0 min-w-[24em] max-w-[36em]", i2 ? "visible" : "hidden"), children: [n === 0 ? ne.jsx(ne.Fragment, {}) : n === 1 ? ne.jsx("div", { className: "en-header group flex flex-row px-5 py-3 justify-between items-center bg-background/0 hover:bg-background/40", children: ne.jsx("div", { className: "flex-1 flex justify-center", children: ne.jsx(Bs2, { onDrag: (g2, x2) => console.log("dx: ", g2, ", dy: ", x2) }) }) }) : ne.jsx(ne.Fragment, {}), ne.jsx("div", { className: by("flex flex-col p-8 pt-4 gap-4"), children: ne.jsx("div", { className: by("en-content", "flex flex-col max-h-[80vh] overflow-y-auto"), children: u }) })] }), i2 ? ne.jsx(ne.Fragment, {}) : ne.jsx("div", { className: "flex p-2", children: ne.jsx(_x, { size: "sm", color: "success" }) })] });
   });
   Rr2.displayName = "TranslateWindow";
-  Rr2.Content = la;
+  Rr2.Content = da;
   var mn2 = new Ls2();
   var Yt3 = (i2, n, d2) => {
     i2 && i2.classList.add("playing");
@@ -15042,21 +15042,21 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   var Ds2 = ({ text: i2, setIsLoaded: n, setWindowMode: d2 }) => {
     const [p, u] = w.useState(void 0), [g2, x2] = w.useState(void 0), [y2, k2] = w.useState({ hasPhonetic: false, basicTranslation: "" }), h = w.useRef(null);
     J5.getLocal("easynote-translate-target-Language").then((j) => {
-      u(j), h.current || (h.current = new Wa2(sa.BigModel, j));
+      u(j), h.current || (h.current = new Wa2(ia.BigModel, j));
     });
     const z = (j) => {
-      h.current ? E2(j) : J5.getLocal("easynote-translate-target-Language").then((I) => {
-        u(I), h.current || (h.current = new Wa2(sa.BigModel, I)), E2(j);
+      h.current ? E2(j) : J5.getLocal("easynote-translate-target-Language").then((N2) => {
+        N2 || (N2 = "zh-CN", J5.setLocal("easynote-translate-target-Language", N2)), u(N2), h.current || (h.current = new Wa2(ia.BigModel, N2)), E2(j);
       });
     }, E2 = (j) => {
-      var I, L2;
+      var N2, L2;
       try {
-        (I = h.current) == null || I.onBasicTranslationCompleted((N2) => {
+        (N2 = h.current) == null || N2.onBasicTranslationCompleted((I) => {
           var _3, T2;
-          x2(N2), d2(N2.isWord ? Fr2.Word : Fr2.Sentence), k2({ hasPhonetic: !!((_3 = N2.wordTranslation) != null && _3.phonetic), basicTranslation: (T2 = N2.translation) == null ? void 0 : T2.text }), n(true), Yt3(void 0, N2.text, N2.detectedLang), console.log("result\uFF1A", N2);
+          x2(I), d2(I.isWord ? Fr2.Word : Fr2.Sentence), k2({ hasPhonetic: !!((_3 = I.wordTranslation) != null && _3.phonetic), basicTranslation: (T2 = I.translation) == null ? void 0 : T2.text }), n(true), Yt3(void 0, I.text, I.detectedLang), console.log("result\uFF1A", I);
         }), (L2 = h.current) == null || L2.beginTranslate(j);
-      } catch (N2) {
-        console.error("translate failed:", N2), x2(void 0);
+      } catch (I) {
+        console.error("translate failed:", I), x2(void 0);
       }
     };
     return w.useEffect(() => (i2 !== (g2 == null ? void 0 : g2.text) && (x2(void 0), n(false)), g2 || z(i2), () => {
@@ -15078,7 +15078,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       return Yt3(p.currentTarget, ((u = i2.translation) == null ? void 0 : u.text) ?? "", n);
     }, children: ne.jsx("svg", { width: "16", height: "16", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", fill: "currentColor", children: ne.jsx("path", { d: "M13 7.22049L9.60282 10H6V14H9.60282L13 16.7795V7.22049ZM8.88889 16H5C4.44772 16 4 15.5523 4 15V9.00001C4 8.44772 4.44772 8.00001 5 8.00001H8.88889L14.1834 3.66815C14.3971 3.49329 14.7121 3.52479 14.887 3.73851C14.9601 3.82784 15 3.93971 15 4.05513V19.9449C15 20.221 14.7761 20.4449 14.5 20.4449C14.3846 20.4449 14.2727 20.405 14.1834 20.3319L8.88889 16ZM18.8631 16.5911L17.4411 15.169C18.3892 14.4376 19 13.2901 19 12C19 10.5697 18.2493 9.31469 17.1203 8.6076L18.5589 7.169C20.0396 8.2616 21 10.0187 21 12C21 13.8422 20.1698 15.4904 18.8631 16.5911Z" }) }) })] }) })] }) : null;
   };
-  var aa = 3;
+  var na = 3;
   var jr2 = ((i2) => (i2[i2.Forward = 0] = "Forward", i2[i2.Backward = 1] = "Backward", i2))(jr2 || {});
   var Vs2 = ({ callback: i2 }) => {
     const n = () => i2(Ks2());
@@ -15094,10 +15094,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     const u = p.getBoundingClientRect(), g2 = document.createRange();
     g2.setStart(n.endContainer, n.endOffset), g2.setEnd(n.endContainer, n.endOffset);
     const x2 = g2.getBoundingClientRect(), y2 = d2 ? 1 : 0;
-    return d2 ? { flowDirection: y2, coords: { top: u.top + window.scrollY - aa, left: u.left + window.scrollX }, text: i2.toString() } : x2.x === 0 && x2.y === 0 && x2.width === 0 && x2.height === 0 ? { flowDirection: y2, coords: { top: u.top + window.scrollY - aa, left: u.left + window.scrollX }, text: i2.toString() } : { flowDirection: y2, coords: { top: x2.bottom + window.scrollY + aa, left: x2.right + window.scrollX }, text: i2.toString() };
+    return d2 ? { flowDirection: y2, coords: { top: u.top + window.scrollY - na, left: u.left + window.scrollX }, text: i2.toString() } : x2.x === 0 && x2.y === 0 && x2.width === 0 && x2.height === 0 ? { flowDirection: y2, coords: { top: u.top + window.scrollY - na, left: u.left + window.scrollX }, text: i2.toString() } : { flowDirection: y2, coords: { top: x2.bottom + window.scrollY + na, left: x2.right + window.scrollX }, text: i2.toString() };
   }
   var Hs2 = ({ isVisible: i2, flowDirection: n, text: d2, isClickOnMeFuncRef: p }) => {
-    const u = w.useRef(null), g2 = w.useRef(null), x2 = w.useRef(null), [y2, k2] = w.useState(document.body), [h, z] = w.useState(false), [E2, j] = w.useState(false), [I, L2] = w.useState(Fr2.Word), N2 = (T2) => {
+    const u = w.useRef(null), g2 = w.useRef(null), x2 = w.useRef(null), [y2, k2] = w.useState(document.body), [h, z] = w.useState(false), [E2, j] = w.useState(false), [N2, L2] = w.useState(Fr2.Word), I = (T2) => {
       const M = T2.composedPath(), A2 = M && M.length > 0 ? M.at(0) : null, $ = u.current, Z2 = g2.current;
       return A2 ? $ && Z2 ? $ === A2 || $.contains(A2) || Z2 === A2 || Z2.contains(A2) : false : true;
     }, _3 = () => {
@@ -15105,21 +15105,21 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     };
     return w.useEffect(() => {
       const T2 = document.getElementById(hn2), M = T2 == null ? void 0 : T2.shadowRoot, A2 = M == null ? void 0 : M.getElementById("root");
-      return A2 && k2(A2), p.current = N2, i2 || (z(false), j(false)), x2.current && x2.current.addEventListener("click", _3), () => {
+      return A2 && k2(A2), p.current = I, i2 || (z(false), j(false)), x2.current && x2.current.addEventListener("click", _3), () => {
         var $;
         ($ = x2.current) == null || $.removeEventListener("click", _3);
       };
-    }, [i2, x2.current, h]), ne.jsx(L5, { ref: u, id: "NAVBAR", maxWidth: "sm", height: "2.75em", position: "sticky", className: "bg-background rounded-full outline-solid outline-current/6 outline-1 shadow-sm", classNames: { wrapper: "px-3 h-[var(--navbar-height)/2]" }, children: ne.jsx(D5, { className: "flex", children: ne.jsxs(O5, { className: "flex", children: [ne.jsx(j5, { isIconOnly: true, variant: "light", className: "min-w-8 w-8 text-current/75 hover:text-current/100", children: ne.jsx(u5, { className: "w-5 h-5" }) }), ne.jsxs(Pt2, { ref: g2, isOpen: i2 && h, portalContainer: y2, offset: 3, placement: n === jr2.Backward ? "top" : "bottom", shouldFlip: true, contentClassName: by("bg-background/90 dark:bg-background/80 subpixel-antialiased outline-solid outline-current/6 outline-1 box-border rounded-large overflow-clip shadow-medium", "subpixel-antialiased backdrop-blur backdrop-saturate-150 p-0"), children: [ne.jsx(Pt2.Trigger, { children: ne.jsx(j5, { ref: x2, isIconOnly: true, variant: "light", className: by("min-w-8 w-8", h ? "text-current/100 aria-expanded:opacity-100" : "text-current/60 dark:text-current/75", "hover:text-current/100", "transition-colors duration-150 ease-in-out"), children: ne.jsx(c5, { className: by("w-4 h-4") }) }) }), ne.jsx(Pt2.Content, { children: ne.jsx(Rr2, { isLoaded: E2, windowMode: I, children: ne.jsx(Rr2.Content, { children: ne.jsx(Ds2, { text: d2, setIsLoaded: j, setWindowMode: L2 }) }) }) })] })] }) }) });
+    }, [i2, x2.current, h]), ne.jsx(L5, { ref: u, id: "NAVBAR", maxWidth: "sm", height: "2.75em", position: "sticky", className: "bg-background rounded-full outline-solid outline-current/6 outline-1 shadow-sm", classNames: { wrapper: "px-3 h-[var(--navbar-height)/2]" }, children: ne.jsx(D5, { className: "flex", children: ne.jsxs(O5, { className: "flex", children: [ne.jsx(j5, { isIconOnly: true, variant: "light", className: "min-w-8 w-8 text-current/75 hover:text-current/100", children: ne.jsx(u5, { className: "w-5 h-5" }) }), ne.jsxs(Pt2, { ref: g2, isOpen: i2 && h, portalContainer: y2, offset: 3, placement: n === jr2.Backward ? "top" : "bottom", shouldFlip: true, contentClassName: by("bg-background/90 dark:bg-background/80 subpixel-antialiased outline-solid outline-current/6 outline-1 box-border rounded-large overflow-clip shadow-medium", "subpixel-antialiased backdrop-blur backdrop-saturate-150 p-0"), children: [ne.jsx(Pt2.Trigger, { children: ne.jsx(j5, { ref: x2, isIconOnly: true, variant: "light", className: by("min-w-8 w-8", h ? "text-current/100 aria-expanded:opacity-100" : "text-current/60 dark:text-current/75", "hover:text-current/100", "transition-colors duration-150 ease-in-out"), children: ne.jsx(c5, { className: by("w-4 h-4") }) }) }), ne.jsx(Pt2.Content, { children: ne.jsx(Rr2, { isLoaded: E2, windowMode: N2, children: ne.jsx(Rr2.Content, { children: ne.jsx(Ds2, { text: d2, setIsLoaded: j, setWindowMode: L2 }) }) }) })] })] }) }) });
   };
   var Ws2 = () => {
-    var N2, _3, T2;
+    var I, _3, T2;
     const i2 = w.useRef(null), [n, d2] = w.useState(false), [p, u] = w.useState({ top: 0, left: 0 }), [g2, x2] = w.useState(false), [y2, k2] = w.useState(false), h = w.useRef(null), z = w.useRef(null), E2 = (M, A2) => {
       g2 || (x2(true), d2(M), u(A2), z.current && (clearTimeout(z.current), z.current = null), z.current = setTimeout(() => {
         k2(true);
       }, 250));
     }, j = () => {
       x2(false), k2(false), z.current && (clearTimeout(z.current), z.current = null);
-    }, I = () => {
+    }, N2 = () => {
       setTimeout(() => {
         i2.current && i2.current.text.trim().length > 0 && E2(i2.current.flowDirection === jr2.Backward, i2.current.coords);
       }, 50);
@@ -15130,10 +15130,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       const M = Vs2({ callback: (A2) => {
         i2.current = A2;
       } });
-      return document.addEventListener("mouseup", I), document.addEventListener("mousedown", L2), () => {
-        M.destroy(), document.removeEventListener("mouseup", I), document.removeEventListener("mousedown", L2);
+      return document.addEventListener("mouseup", N2), document.addEventListener("mousedown", L2), () => {
+        M.destroy(), document.removeEventListener("mouseup", N2), document.removeEventListener("mousedown", L2);
       };
-    }, [g2]), ne.jsx(ps2, { children: ne.jsx(w.StrictMode, { children: ne.jsx("div", { className: by("absolute z-[9999]  transition-transform duration-250 ease-in-out will-change-transform", "rounded-[12px] border-0 bg-transparent backface-visibility-hidden", g2 ? n ? "translate-x-[-50%] translate-y-[-100%]" : "translate-x-[-50%] translate-y-0" : "translate-x-[-50%] translate-y-[-50%] scale-[0.6]", y2 ? "pointer-events-auto" : "pointer-events-none"), style: { top: (p == null ? void 0 : p.top) ?? 0, left: (p == null ? void 0 : p.left) ?? 0 }, children: ne.jsx("div", { className: by("transition-opacity duration-250 ease-in-out will-change-opacity", "border-0 bg-transparent backface-visibility-hidden", g2 ? "opacity-100" : "opacity-0"), children: ne.jsx(Hs2, { isVisible: g2, flowDirection: ((N2 = i2.current) == null ? void 0 : N2.flowDirection) ?? jr2.Forward, isClickOnMeFuncRef: h, text: ((T2 = (_3 = i2.current) == null ? void 0 : _3.text) == null ? void 0 : T2.trim()) ?? "" }) }) }) }) });
+    }, [g2]), ne.jsx(ps2, { children: ne.jsx(w.StrictMode, { children: ne.jsx("div", { className: by("absolute z-[9999]  transition-transform duration-250 ease-in-out will-change-transform", "rounded-[12px] border-0 bg-transparent backface-visibility-hidden", g2 ? n ? "translate-x-[-50%] translate-y-[-100%]" : "translate-x-[-50%] translate-y-0" : "translate-x-[-50%] translate-y-[-50%] scale-[0.6]", y2 ? "pointer-events-auto" : "pointer-events-none"), style: { top: (p == null ? void 0 : p.top) ?? 0, left: (p == null ? void 0 : p.left) ?? 0 }, children: ne.jsx("div", { className: by("transition-opacity duration-250 ease-in-out will-change-opacity", "border-0 bg-transparent backface-visibility-hidden", g2 ? "opacity-100" : "opacity-0"), children: ne.jsx(Hs2, { isVisible: g2, flowDirection: ((I = i2.current) == null ? void 0 : I.flowDirection) ?? jr2.Forward, isClickOnMeFuncRef: h, text: ((T2 = (_3 = i2.current) == null ? void 0 : _3.text) == null ? void 0 : T2.trim()) ?? "" }) }) }) }) });
   };
   var xn3 = "easynote-host";
   var Zt2 = document.getElementById(xn3);
