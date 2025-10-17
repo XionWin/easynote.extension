@@ -15031,7 +15031,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   Rr2.Content = da;
   var mn2 = new As2();
   var Yt3 = (i2, n, d2) => {
-    i2 && i2.classList.add("playing");
+    console.log("lang: ", d2), i2 && i2.classList.add("playing");
     try {
       mn2.speakText(n, d2, () => {
         i2 == null || i2.classList.remove("playing");
