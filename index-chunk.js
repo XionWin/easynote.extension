@@ -1,1 +1,1 @@
-import{E as a}from"./features-animation-chunk.js";import"./translation-setting-utility-chunk.js";var i=a;export{i as default};
+import{E as o}from"./features-animation-chunk.js";import"./translation-setting-utility-chunk.js";import"./settings-chunk.js";var m=o;export{m as default};
