@@ -14990,7 +14990,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     constructor() {
       ue2(this, "tasks");
     }
-    speak(n, d3, p, u, g3, x3) {
+    readAloud(n, d3, p, u, g3, x3) {
       if (!("speechSynthesis" in window)) throw new Error("SpeechSynthesis is not supported in this browser.");
       Cr2.speaking && Cr2.cancel();
       const y3 = new SpeechSynthesisUtterance(n);
@@ -15006,7 +15006,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     playNext() {
       if (!this.tasks || this.tasks.length === 0) return;
       const n = this.tasks.shift();
-      n && this.speak(n.text, n.lang, n.OnFinishedOrCanceled, n.volume, n.rate, n.pitch);
+      n && this.readAloud(n.text, n.lang, n.OnFinishedOrCanceled, n.volume, n.rate, n.pitch);
     }
     stopSpeaking() {
       this.tasks = void 0, Cr2.cancel();
@@ -15075,7 +15075,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   var jr2 = (i, n, d3, p) => {
     i && i.classList.add("playing");
     try {
-      _r2.speak(n, d3, () => {
+      _r2.readAloud(n, d3, () => {
         i == null || i.classList.remove("playing"), p == null || p();
       });
     } catch (u) {
