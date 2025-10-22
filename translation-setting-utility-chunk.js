@@ -1,5 +1,5 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["index-chunk.js","features-animation-chunk.js","settings-chunk.js"])))=>i.map(i=>d[i]);
-import{D as fi,L as tp}from"./settings-chunk.js";function Ku(n){return n&&n.__esModule&&Object.prototype.hasOwnProperty.call(n,"default")?n.default:n}var Ga={exports:{}},jo={},Qa={exports:{}},Ee={};/**
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["index-chunk.js","features-animation-chunk.js","default-settings-chunk.js"])))=>i.map(i=>d[i]);
+import{D as fi,L as tp}from"./default-settings-chunk.js";function Ku(n){return n&&n.__esModule&&Object.prototype.hasOwnProperty.call(n,"default")?n.default:n}var Ga={exports:{}},jo={},Qa={exports:{}},Ee={};/**
  * @license React
  * react.production.min.js
  *
