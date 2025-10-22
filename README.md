@@ -1,19 +1,24 @@
 # easynote.extension
 
 ### Description
-This extension helps you learn and manage words while browsing the web.  
-When you select text on any website, it provides:
+Easynote helps you learn and manage words naturally while browsing the web.
+Simply select any text, and it instantly provides:
 
-- **Instant translation**  
-- **Pronunciation and phonetic notes**  
-- **Contextual examples**  
-- **Personal word list management** (Not availiable)
+- **✨ Instant translation**  
+- **🔊 Pronunciation and phonetic notes**  
+- **📘 Contextual examples**  
+- **🗂️ Personal word list management** (coming soon)
 
-This is an independent project and will continue to evolve.  
-New features will be added over time, such as smarter vocabulary review and better integration with external tools.  
+This is an independent project that continues to evolve.
+Future updates will include smarter vocabulary review and deeper integration with external tools.
 
-Thank you for using easynote!  
-Your feedback is very important and will help us improve further.
+💬 Join our community!
+We’d love to hear your feedback, ideas, and feature requests.
+Join our Discord to chat, report issues, and follow new updates:
+👉 https://discord.gg/fpPft348
+
+Thank you for being part of Easynote! 💙
+Your support helps us make language learning easier and more enjoyable for everyone.
 
 ---
 
