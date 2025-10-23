@@ -11888,12 +11888,12 @@ Error generating stack: ` + d3.message + `
     return JSON.stringify(n3, null, 2).replace(/\$\{target_language\}/g, t3);
   }
   function w3(n3, t3) {
-    const s = [g.identity, "RULES:", ...g.instructions.map((e) => (e = e.replace("${single_word_output_template}", d(T, n3)), e = e.replace("${sentence_or_phrase_output_template}", d(x, n3)), e = e.replace("${target_language}", n3), e))];
+    const s = [g.identity, "RULES:", ...g.instructions.map((e) => (e = e.replace("${single_word_output_template}", d(T, n3)), e = e.replace("${sentence_or_phrase_output_template}", d(S, n3)), e = e.replace("${target_language}", n3), e))];
     return t3 && (s.push("CONTEXT:"), s.push(t3)), s.join(` 
 `);
   }
   function _3(n3) {
-    return S.replace("${content_to_translate}", n3);
+    return x.replace("${content_to_translate}", n3);
   }
   var O3 = class {
     constructor(t3) {
@@ -11905,9 +11905,9 @@ Error generating stack: ` + d3.message + `
     }
   };
   var g = { identity: "You are a professional multilingual translation engine.", instructions: ["1. For single words: provide translation, phonetics, definitions grouped by part of speech, and example sentences.", "2. For sentences/phrases (i.e., multi-word expressions or sentences containing spaces, punctuation, or more than one word in the detected language): provide translation only.", "3. All responses must be in ${target_language}.", "4. For English source text, use American phonetics for phonetic symbols.", "5. For Chinese source text, use standard Pinyin with tone marks for phonetic symbols.", "6. For other source languages, use their native phonetic systems for phonetic symbols.", "7. Do not output languages other than those requested", "8. Consider context when analyzing words.", "9. Output raw JSON without markdown code blocks.", "10. Ensure all textual content (translations, definitions, examples, etc.) is written strictly in the explicitly specified target language.", "11. For languages such as Chinese, Japanese, Korean, or Thai \u2014 where a single semantic word may consist of multiple characters \u2014 treat any input that represents one semantic unit (i.e., conveys a single idea or concept) as a single word, and follow Rule 1.", "SINGLE WORD OUTPUT:", "${single_word_output_template}", "SENTENCE/PHRASE OUTPUT:", "${sentence_or_phrase_output_template}"] };
-  var T = { detected_language: "en-US", translation: "translation in ${target_language}", phonetic: "/h\u0259\u02C8l\u0259\u028A/", definitions: [{ pos: "excl.", meaning: "${target_language} translation for current pos", example: { source: "A natural example sentence written in source language, accurately showing this sense of the word.", target: "The same example translated into ${target_language}." } }], contextual_analysis: "Provide a contextual analysis written strictly in ${target_language}, excluding keywords and nonessential elements." };
-  var x = { detected_language: "en-US", translation: "translation in ${target_language}" };
-  var S = '\u3010Content to Translate\u3011: "${content_to_translate}"';
+  var T = { detected_language: "en-US", translation: "translation in ${target_language}", phonetic: "/h\u0259\u02C8l\u0259\u028A/", definitions: [{ pos: "excl.", meaning: "${target_language} translation for current pos", example: { source: "A natural example sentence written in source language, accurately showing this sense of the word.", target: "The same example translated into ${target_language}." } }], contextual_analysis: "Provide a contextual analysis written strictly in ${target_language}, while allowing keywords and nonessential elements to remain in the source language." };
+  var S = { detected_language: "en-US", translation: "translation in ${target_language}" };
+  var x = '\u3010Content to Translate\u3011: "${content_to_translate}"';
 
   // dist/content.js
   var __vite__mapDeps2 = (i, m4 = __vite__mapDeps2, d3 = m4.f || (m4.f = ["index-chunk.js", "features-animation-chunk.js", "translation-setting-utility-chunk.js", "default-settings-chunk.js"])) => i.map((i3) => d3[i3]);
@@ -15067,7 +15067,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   });
   Ir2.displayName = "Accordion";
   Ir2.Item = kn2;
-  var Ls2 = /(.+?[。．｡！？!?？።։။៚॥])(?=\s|$|["'”’）)\]])/gu;
+  var Ls2 = /(.+?[。．｡！？!?？።։။៚॥.!?]+)(?=\s+|$|["'”’）)\]])/gu;
   var Za2 = (o, n3, l3) => {
     if (!o || o.trim().length === 0) return;
     const p = l3.current;
