@@ -15067,7 +15067,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   });
   Ir2.displayName = "Accordion";
   Ir2.Item = kn2;
-  var Ls2 = /(.+?[。．｡！？!?？።։။៚॥.!?]+)(?=\s+|$|["'”’）)\]])/gu;
+  var Ls2 = /(.+?[。．｡！？!?？።။៚॥.!?]+)(?=$|\s|["'”’）)\]]|[\n\r])/gu;
   var Za2 = (o, n3, l3) => {
     if (!o || o.trim().length === 0) return;
     const p = l3.current;
@@ -15075,7 +15075,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     const u = o.slice(p.length), h = Array.from(u.matchAll(Ls2)).map((w4) => w4[1].trim());
     if (h.length > 0) {
       const w4 = Ae.getInstance();
-      for (const g3 of h) w4.append(g3, n3);
+      for (const g3 of h) w4.append(g3, n3), console.log("read task push content: ", g3);
       const x3 = h[h.length - 1], y3 = o.indexOf(x3) + x3.length;
       l3.current = o.slice(0, y3);
     }
@@ -15088,7 +15088,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     }, []), w.useEffect(() => {
       p && s4.getEnableReadAloud((R) => {
         var I;
-        R && (l3.basicTranslation.isWord ? u.contextualAnalysis && Za2(u.contextualAnalysis, l3.targetLanguage, x3) : (I = u.translation) != null && I.text && Za2(u.translation.text, l3.targetLanguage, w4));
+        R && (l3.basicTranslation.isWord || (I = u.translation) != null && I.text && Za2(u.translation.text, l3.targetLanguage, w4), u.contextualAnalysis && Za2(u.contextualAnalysis, l3.targetLanguage, x3));
       });
     }, [p, u]), ne.jsx("div", { className: "rd-words-phonetic text-medium overflow-clip", children: ne.jsx(Ir2, { isCompact: true, isOpen: true, variant: "bordered", className: "px-0 border-none", children: ne.jsx(Ir2.Item, { title: ne.jsx("span", { className: "font-bold text-emerald-500", children: "AI Translate(GLM-4 Flash)" }), children: ne.jsxs("div", { className: "flex flex-col gap-3", children: [((g3 = (y3 = l3.basicTranslation) == null ? void 0 : y3.translation) == null ? void 0 : g3.text) === u.translation ? null : ne.jsx("p", { children: u.translation.text }), (E4 = (z = l3.basicTranslation) == null ? void 0 : z.wordTranslation) != null && E4.phonetic ? null : ne.jsx("p", { children: (j = u.wordTranslation) == null ? void 0 : j.phonetic }), ne.jsx("div", { className: "rd-words-translation flex flex-col gap-2", children: (M = u == null ? void 0 : u.wordTranslation) != null && M.dictionary ? u.wordTranslation.dictionary.map((R) => ne.jsxs("div", { className: "rd-words-translation flex flex-col gap-2", children: [ne.jsx("div", { className: "rd-words-translation-item flex flex-row gap-3 w-full", children: ne.jsxs("p", { className: "break-words whitespace-normal", children: [ne.jsx("span", { className: "text-amber-400", children: R.pos }), ne.jsx("span", { className: "ml-3", children: R.meaning })] }) }), R.example ? ne.jsx("div", { className: "rd-words-translation-item flex flex-row gap-3 w-full", children: ne.jsxs("p", { className: "break-words whitespace-normal", children: [ne.jsx("span", { children: R.example.source }), ne.jsx("span", { className: "ml-3", children: R.example.target })] }) }) : null] })) : null }), u.contextualAnalysis ? ne.jsx(l4, { className: "bg-gray-600/20 border-1 border-default-600 dark:border-default-100", children: ne.jsx(o4, { children: ne.jsx("p", { children: u.contextualAnalysis }) }) }) : null] }) }) }) });
   };
