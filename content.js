@@ -15137,11 +15137,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       Ae.getInstance().debug(), j(true);
     }), [E4, j] = w.useState(false);
     s4.getTargetLanguage((I) => {
-      u(I), g3.current ?? (g3.current = new la(Tr2.SiliconFlow, I));
+      u(I), g3.current ?? (g3.current = new la(Tr2.BigModel, I));
     });
     const M = (I) => {
       g3.current ? R(I) : s4.getTargetLanguage((C3) => {
-        u(C3), g3.current ?? (g3.current = new la(Tr2.SiliconFlow, C3)), R(I);
+        u(C3), g3.current ?? (g3.current = new la(Tr2.BigModel, C3)), R(I);
       });
     }, R = (I) => {
       try {
